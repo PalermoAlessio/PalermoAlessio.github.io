@@ -1,4 +1,4 @@
-<html lang="en">
+<html lang="it">
   <head>
     <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="" />
     <link
@@ -22,17 +22,24 @@
     <div class="relative flex size-full min-h-screen flex-col group/design-root overflow-x-hidden">
       <div class="layout-container flex h-full grow flex-col">
         <!-- Toggle per dark mode e selettore lingua -->
-        <div class="flex justify-end px-4 py-2 gap-4">
-          <!-- Selettore lingua -->
-          <select id="language-selector" class="bg-white dark:bg-gray-800 text-[#101817] dark:text-gray-200 border border-gray-300 dark:border-gray-600 rounded px-2 py-1">
-            <option value="en">EN</option>
-            <option value="it">IT</option>
-          </select>
-          <!-- Switch per dark mode -->
-          <label class="relative inline-flex items-center cursor-pointer">
-            <input type="checkbox" id="dark-mode-toggle" class="sr-only peer">
-            <div class="w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-[#69cdc0] dark:peer-focus:ring-[#4a9b8f] rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-[#69cdc0] dark:peer-checked:bg-[#4a9b8f]"></div>
-          </label>
+        <div class="flex justify-end px-4 py-2 gap-4 relative z-10">
+          <!-- Language selector button -->
+          <button id="lang-button" class="bg-white dark:bg-gray-800 text-[#101817] dark:text-gray-200 border border-gray-300 dark:border-gray-600 rounded px-3 py-1 flex items-center gap-1 hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors">
+            <span id="current-lang">IT</span>
+            <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+            </svg>
+          </button>
+          <!-- Language menu -->
+          <div id="lang-menu" class="hidden absolute top-full right-0 mt-1 w-32 bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-600 rounded shadow-lg">
+            <button class="block w-full px-4 py-2 text-left hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors" data-lang="en">EN</button>
+            <button class="block w-full px-4 py-2 text-left hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors" data-lang="it">IT</button>
+          </div>
+          <!-- Button for dark mode toggle with icons -->
+          <button id="theme-toggle" type="button" class="text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5">
+            <svg id="theme-toggle-dark-icon" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path></svg>
+            <svg id="theme-toggle-light-icon" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" fill-rule="evenodd" clip-rule="evenodd"></path></svg>
+          </button>
         </div>
         <div class="px-40 flex flex-1 justify-center py-5">
           <div class="layout-content-container flex flex-col max-w-[960px] flex-1">
@@ -40,7 +47,7 @@
               <div class="@[480px]:px-4 @[480px]:py-3">
                 <div
                   class="w-full bg-center bg-no-repeat bg-cover flex flex-col justify-end overflow-hidden bg-[#f9fbfb] dark:bg-gray-800 @[480px]:rounded-xl min-h-[218px]"
-                  style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAUtVlJEoIRnOxyxsxtgZoVni_O_DhFW5YO3OLPNZVPiLr_BQGLZrcoM9hkfnXXuul1UAqaCdvMW5gBmPwk8DP4-zuifgYPc07L6Rf5gaQawx0EbTdIUUyrgnYeQWF3-nHUx8VdYMGa0-6t3hPM9achBMWCS8V_x5rpOYC2QUycc611yFZdmP4wS5mKSw3HVuojFq96d52GGz8PUDp7JEoir0V_T10kw7rf7x1-rhBs8vb91xDM0A0SVzRBBZPdCtdqyOysZf_lgkIn");'
+                  style='background-image: url("images/profile.jpg");'
                 ></div>
               </div>
             </div>
@@ -58,12 +65,31 @@
             <p data-lang="about-me" class="text-base font-normal leading-normal pb-3 pt-1 px-4">
               Fin dai tempi della scuola, sviluppo progetti autonomi in software e hardware across diversi campi dell'informatica, con una specializzazione recente negli LLM e nelle IA in generale. Questo percorso ha affinato le mie capacità di problem solving e di adattamento a qualsiasi contesto aziendale o privato, sia individualmente che in team. Il mio approccio professionale è guidato da valori come puntualità, professionalità e spirito di adattamento, che mi permettono di trovare soluzioni ottimali anche con risorse limitate e di gestire efficacemente dinamiche di gruppo.
             </p>
+            <!-- New section for Experience and Skills -->
+            <div class="flex flex-col md:flex-row gap-6 px-4 py-5">
+              <div class="flex-1">
+                <h3 data-lang="experience-title" class="text-[20px] font-bold leading-tight tracking-[-0.015em] pb-2">Esperienza</h3>
+                <ul class="list-disc pl-5 text-base font-normal leading-normal space-y-2">
+                  <li data-lang="experience-item1">Sviluppo AI presso Tech Company, 2022-Presente: Progettazione di modelli LLM per applicazioni enterprise.</li>
+                  <li data-lang="experience-item2">Tecnico Hardware presso Startup Innovativa, 2019-2022: Assemblaggio e ottimizzazione di sistemi hardware per IA.</li>
+                  <li data-lang="experience-item3">Stagista in Sviluppo Software, 2018: Creazione di applicazioni web e mobile.</li>
+                </ul>
+              </div>
+              <div class="flex-1">
+                <h3 data-lang="skills-title" class="text-[20px] font-bold leading-tight tracking-[-0.015em] pb-2">Competenze</h3>
+                <ul class="list-disc pl-5 text-base font-normal leading-normal space-y-2">
+                  <li data-lang="skills-item1">Linguaggi: Python, JavaScript, C++</li>
+                  <li data-lang="skills-item2">Tecnologie AI: LLM, Machine Learning, Deep Learning</li>
+                  <li data-lang="skills-item3">Altri: Sviluppo Web, Cloud Computing, Problem Solving</li>
+                </ul>
+              </div>
+            </div>
             <h2 data-lang="portfolio-title" class="text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5">Portfolio</h2>
             <div class="grid grid-cols-[repeat(auto-fit,minmax(158px,1fr))] gap-3 p-4">
               <div class="flex flex-col gap-3 pb-3">
                 <div
                   class="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-xl"
-                  style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDvEIb0VXD5QqDhs6RGXUqQ8l2BpjwSFHVtzmT_Q2RzkdRUtCpm4ys6DQZ-zkCdSFOUxJuJXJGujpIp1Z2egbJBilSS-7Q7HPxIbKjjJdIMWDnPNffUt8DcCeIBc8Wa-4XLA-rtx5LeH_8-_pidIbsR-N4vLCPD0vie8v_mwlChc1GrK5YwQtS6_1XUfyOc3HFw670bAyG4k850xkfCpIowfanuHuqh05M8tQylGVYZtbksJf6Ti_RIVKJoIoYopKZaKnfknVk_cp_L");'
+                  style='background-image: url("images/project1.jpg");'
                 ></div>
                 <div>
                   <p class="text-base font-medium leading-normal">Project Phoenix</p>
@@ -73,7 +99,7 @@
               <div class="flex flex-col gap-3 pb-3">
                 <div
                   class="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-xl"
-                  style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAx5UOFNaPA1BrjE0tIVYg9gt19otOTPgaattJr-FsStNv7FhGjpCJrAci3xp-Nw-MXhmPFASlpGa0e7TFiQ56ejBlRo2h2vPYleLt5_Z6DtSIy7rtPPLqEINHrSyQmnZEs-BEzZoxyAkLKG1CqBW-hE-NcR-0nLKE8oalqlO48pQyT5bX1ZfD85Kr2c0L0-bmbyKLqjXgneOOwRnXsIrdnv31xsO6iMwKO99effXfrR97jMPKglpWLJcJIc695ynUO2mlGiVnRgwE_");'
+                  style='background-image: url("images/project2.jpg");'
                 ></div>
                 <div>
                   <p class="text-base font-medium leading-normal">Project Nova</p>
@@ -83,7 +109,7 @@
               <div class="flex flex-col gap-3 pb-3">
                 <div
                   class="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-xl"
-                  style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBNuar_hCR_va5OJ0UVtLoRqCgnezfEwb3bamIx535NdKckfXq5RxhreAESdD5hSk0tArX_Eq-3p44h1xeVScgkKPYa5POxjhRrzB_Z2ZA2yA7lCPoIK6qWBc4sT4NmxBuo7R9vU4XXe4IzX9dWqEYVrxJdyejlb74V9YP4FJmFqs-q_oKZzU3rGALQm1ZndvNw7zSIBYLnjrnrijBJt-RFrZ6zpMi0Vz_HX4pkBm3UdYLEOik8fFd7c5RftSNYcgRlZdFjFpmiRe_X");'
+                  style='background-image: url("images/project3.jpg");'
                 ></div>
                 <div>
                   <p class="text-base font-medium leading-normal">Project Nebula</p>
@@ -130,6 +156,16 @@
                   </div>
                   <p class="text-sm font-medium leading-normal">Phone</p>
                 </a>
+                <a href="mailto:alessiopalermo34@gmail.com" class="flex flex-col items-center gap-2 bg-[#f9fbfb] dark:bg-gray-800 py-2.5 text-center cursor-pointer">
+                  <div class="rounded-full bg-[#eaf1f0] dark:bg-gray-700 p-2.5">
+                    <div class="text-[#101817] dark:text-gray-200" data-icon="Envelope" data-size="20px" data-weight="regular">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" fill="currentColor" viewBox="0 0 256 256">
+                        <path d="M224,48H32a8,8,0,0,0-8,8V192a16,16,0,0,0,16,16H216a16,16,0,0,0,16-16V56A8,8,0,0,0,224,48Zm0,152H32V64L128,152a8,8,0,0,0,8,0L224,64V128Z"></path>
+                      </svg>
+                    </div>
+                  </div>
+                  <p class="text-sm font-medium leading-normal">Gmail</p>
+                </a>
               </div>
             </div>
             <footer class="flex flex-col gap-6 px-5 py-10 text-center @container">
@@ -142,26 +178,40 @@
 
     <!-- Script per dark mode e language selector -->
     <script>
-      // Dark mode toggle with checkbox
-      const toggleCheckbox = document.getElementById('dark-mode-toggle');
+      // Dark mode toggle
+      const themeToggleDarkIcon = document.getElementById('theme-toggle-dark-icon');
+      const themeToggleLightIcon = document.getElementById('theme-toggle-light-icon');
+      const themeToggleBtn = document.getElementById('theme-toggle');
       const htmlElement = document.documentElement;
 
-      // Carica preferenza da localStorage o sistema
-      if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+      // Initial setup
+      if (localStorage.getItem('color-theme') === 'dark' || (!('color-theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
         htmlElement.classList.add('dark');
-        toggleCheckbox.checked = true;
+        themeToggleLightIcon.classList.remove('hidden');
       } else {
         htmlElement.classList.remove('dark');
-        toggleCheckbox.checked = false;
+        themeToggleDarkIcon.classList.remove('hidden');
       }
 
-      toggleCheckbox.addEventListener('change', () => {
-        if (toggleCheckbox.checked) {
-          htmlElement.classList.add('dark');
-          localStorage.theme = 'dark';
+      themeToggleBtn.addEventListener('click', function() {
+        themeToggleDarkIcon.classList.toggle('hidden');
+        themeToggleLightIcon.classList.toggle('hidden');
+        if (localStorage.getItem('color-theme')) {
+          if (localStorage.getItem('color-theme') === 'light') {
+            htmlElement.classList.add('dark');
+            localStorage.setItem('color-theme', 'dark');
+          } else {
+            htmlElement.classList.remove('dark');
+            localStorage.setItem('color-theme', 'light');
+          }
         } else {
-          htmlElement.classList.remove('dark');
-          localStorage.theme = 'light';
+          if (htmlElement.classList.contains('dark')) {
+            htmlElement.classList.remove('dark');
+            localStorage.setItem('color-theme', 'light');
+          } else {
+            htmlElement.classList.add('dark');
+            localStorage.setItem('color-theme', 'dark');
+          }
         }
       });
 
@@ -171,6 +221,14 @@
           'title': 'Software AI Engineer | Technician | Problem Solver',
           'about-me-title': 'About Me',
           'about-me': 'Since school days, I have been developing autonomous projects in software and hardware across various fields of computer science, with a recent specialization in LLMs and AI in general. This path has honed my problem-solving skills and adaptability to any corporate or private context, both individually and in teams. My professional approach is guided by values such as punctuality, professionalism, and adaptability, which allow me to find optimal solutions even with limited resources and to effectively manage group dynamics.',
+          'experience-title': 'Experience',
+          'experience-item1': 'AI Development at Tech Company, 2022-Present: Designing LLM models for enterprise applications.',
+          'experience-item2': 'Hardware Technician at Innovative Startup, 2019-2022: Assembly and optimization of hardware systems for AI.',
+          'experience-item3': 'Software Development Intern, 2018: Creation of web and mobile applications.',
+          'skills-title': 'Skills',
+          'skills-item1': 'Languages: Python, JavaScript, C++',
+          'skills-item2': 'AI Technologies: LLM, Machine Learning, Deep Learning',
+          'skills-item3': 'Others: Web Development, Cloud Computing, Problem Solving',
           'portfolio-title': 'Portfolio',
           'contact-title': 'Contact',
           'footer': '© 2024 Palermo Alessio. All rights reserved.'
@@ -179,22 +237,59 @@
           'title': 'Ingegnere Software AI | Tecnico | Risolutore di Problemi',
           'about-me-title': 'Su di Me',
           'about-me': 'Fin dai tempi della scuola, sviluppo progetti autonomi in software e hardware across diversi campi dell\'informatica, con una specializzazione recente negli LLM e nelle IA in generale. Questo percorso ha affinato le mie capacità di problem solving e di adattamento a qualsiasi contesto aziendale o privato, sia individualmente che in team. Il mio approccio professionale è guidato da valori come puntualità, professionalità e spirito di adattamento, che mi permettono di trovare soluzioni ottimali anche con risorse limitate e di gestire efficacemente dinamiche di gruppo.',
+          'experience-title': 'Esperienza',
+          'experience-item1': 'Sviluppo AI presso Tech Company, 2022-Presente: Progettazione di modelli LLM per applicazioni enterprise.',
+          'experience-item2': 'Tecnico Hardware presso Startup Innovativa, 2019-2022: Assemblaggio e ottimizzazione di sistemi hardware per IA.',
+          'experience-item3': 'Stagista in Sviluppo Software, 2018: Creazione di applicazioni web e mobile.',
+          'skills-title': 'Competenze',
+          'skills-item1': 'Linguaggi: Python, JavaScript, C++',
+          'skills-item2': 'Tecnologie AI: LLM, Machine Learning, Deep Learning',
+          'skills-item3': 'Altri: Sviluppo Web, Cloud Computing, Problem Solving',
           'portfolio-title': 'Portfolio',
           'contact-title': 'Contatti',
           'footer': '© 2024 Palermo Alessio. Tutti i diritti riservati.'
         }
       };
 
-      const languageSelector = document.getElementById('language-selector');
-      languageSelector.addEventListener('change', (event) => {
-        const lang = event.target.value;
-        document.querySelectorAll('[data-lang]').forEach(el => {
-          const key = el.getAttribute('data-lang');
-          if (translations[lang][key]) {
-            el.textContent = translations[lang][key];
-          }
+      let currentLang = document.documentElement.lang || 'it';
+      document.getElementById('current-lang').textContent = currentLang.toUpperCase();
+
+      // Apply initial translations
+      document.querySelectorAll('[data-lang]').forEach(el => {
+        const key = el.getAttribute('data-lang');
+        if (translations[currentLang][key]) {
+          el.textContent = translations[currentLang][key];
+        }
+      });
+
+      const langButton = document.getElementById('lang-button');
+      const langMenu = document.getElementById('lang-menu');
+
+      langButton.addEventListener('click', (e) => {
+        e.stopPropagation();
+        langMenu.classList.toggle('hidden');
+      });
+
+      langMenu.querySelectorAll('button').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+          const lang = e.target.getAttribute('data-lang');
+          document.querySelectorAll('[data-lang]').forEach(el => {
+            const key = el.getAttribute('data-lang');
+            if (translations[lang][key]) {
+              el.textContent = translations[lang][key];
+            }
+          });
+          document.documentElement.lang = lang;
+          document.getElementById('current-lang').textContent = lang.toUpperCase();
+          langMenu.classList.add('hidden');
         });
-        document.documentElement.lang = lang; // Aggiorna lang attribute
+      });
+
+      // Close menu on outside click
+      document.addEventListener('click', (e) => {
+        if (!langButton.contains(e.target) && !langMenu.contains(e.target)) {
+          langMenu.classList.add('hidden');
+        }
       });
     </script>
   </body>
