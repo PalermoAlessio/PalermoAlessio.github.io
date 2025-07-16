@@ -1,48 +1,67 @@
-<html>
+<html lang="en">
   <head>
     <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="" />
     <link
       rel="stylesheet"
       as="style"
       onload="this.rel='stylesheet'"
-      href="https://fonts.googleapis.com/css2?display=swap&amp;family=Noto+Sans%3Awght%40400%3B500%3B700%3B900&amp;family=Public+Sans%3Awght%40400%3B500%3B700%3B900"
+      href="https://fonts.googleapis.com/css2?display=swap&family=Noto+Sans%3Awght%40400%3B500%3B700%3B900&family=Public+Sans%3Awght%40400%3B500%3B700%3B900"
     />
 
-    <title>Stitch Design</title>
+    <title>Palermo Alessio</title>
     <link rel="icon" type="image/x-icon" href="data:image/x-icon;base64," />
 
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script>
+      tailwind.config = {
+        darkMode: 'class',
+      }
+    </script>
   </head>
-  <body>
-    <div class="relative flex size-full min-h-screen flex-col bg-[#f9fbfb] group/design-root overflow-x-hidden" style='font-family: "Public Sans", "Noto Sans", sans-serif;'>
+  <body class="bg-[#f9fbfb] dark:bg-gray-900 text-[#101817] dark:text-gray-200" style='font-family: "Public Sans", "Noto Sans", sans-serif;'>
+    <div class="relative flex size-full min-h-screen flex-col group/design-root overflow-x-hidden">
       <div class="layout-container flex h-full grow flex-col">
+        <!-- Toggle per dark mode e selettore lingua -->
+        <div class="flex justify-end px-4 py-2 gap-4">
+          <!-- Selettore lingua -->
+          <select id="language-selector" class="bg-white dark:bg-gray-800 text-[#101817] dark:text-gray-200 border border-gray-300 dark:border-gray-600 rounded px-2 py-1">
+            <option value="en">EN</option>
+            <option value="it">IT</option>
+          </select>
+          <!-- Switch per dark mode -->
+          <label class="relative inline-flex items-center cursor-pointer">
+            <input type="checkbox" id="dark-mode-toggle" class="sr-only peer">
+            <div class="w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-[#69cdc0] dark:peer-focus:ring-[#4a9b8f] rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-[#69cdc0] dark:peer-checked:bg-[#4a9b8f]"></div>
+          </label>
+        </div>
         <div class="px-40 flex flex-1 justify-center py-5">
           <div class="layout-content-container flex flex-col max-w-[960px] flex-1">
             <div class="@container">
               <div class="@[480px]:px-4 @[480px]:py-3">
                 <div
-                  class="w-full bg-center bg-no-repeat bg-cover flex flex-col justify-end overflow-hidden bg-[#f9fbfb] @[480px]:rounded-xl min-h-[218px]"
+                  class="w-full bg-center bg-no-repeat bg-cover flex flex-col justify-end overflow-hidden bg-[#f9fbfb] dark:bg-gray-800 @[480px]:rounded-xl min-h-[218px]"
                   style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAUtVlJEoIRnOxyxsxtgZoVni_O_DhFW5YO3OLPNZVPiLr_BQGLZrcoM9hkfnXXuul1UAqaCdvMW5gBmPwk8DP4-zuifgYPc07L6Rf5gaQawx0EbTdIUUyrgnYeQWF3-nHUx8VdYMGa0-6t3hPM9achBMWCS8V_x5rpOYC2QUycc611yFZdmP4wS5mKSw3HVuojFq96d52GGz8PUDp7JEoir0V_T10kw7rf7x1-rhBs8vb91xDM0A0SVzRBBZPdCtdqyOysZf_lgkIn");'
                 ></div>
               </div>
             </div>
-            <h1 class="text-[#101817] tracking-light text-[32px] font-bold leading-tight px-4 text-center pb-3 pt-6">Ethan Carter</h1>
-            <p class="text-[#5c8a84] text-sm font-normal leading-normal pb-3 pt-1 px-4 text-center">Software Engineer | Innovator | Problem Solver</p>
+            <h1 data-lang="name" class="tracking-light text-[32px] font-bold leading-tight px-4 text-center pb-3 pt-6">Palermo Alessio</h1>
+            <p data-lang="title" class="text-[#5c8a84] dark:text-[#a0d1cb] text-sm font-normal leading-normal pb-3 pt-1 px-4 text-center">Software AI Engineer | Technician | Problem Solver</p>
             <div class="flex px-4 py-3 justify-center">
-              <button
-                class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-10 px-4 bg-[#69cdc0] text-[#101817] text-sm font-bold leading-normal tracking-[0.015em]"
+              <a
+                href="https://it.linkedin.com/in/alessio-palermo-41b306152"
+                class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-10 px-4 bg-[#69cdc0] dark:bg-[#4a9b8f] text-[#101817] dark:text-gray-200 text-sm font-bold leading-normal tracking-[0.015em]"
               >
-                <span class="truncate">View Portfolio</span>
-              </button>
+                <span class="truncate">LinkedIn</span>
+              </a>
             </div>
-            <h2 class="text-[#101817] text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5">About Me</h2>
-            <p class="text-[#101817] text-base font-normal leading-normal pb-3 pt-1 px-4">
+            <h2 data-lang="about-me-title" class="text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5">About Me</h2>
+            <p data-lang="about-me" class="text-base font-normal leading-normal pb-3 pt-1 px-4">
               I am a passionate software engineer with a strong foundation in computer science and a proven track record of delivering high-quality software solutions. My expertise
               spans across various domains, including web development, mobile applications, and cloud computing. I thrive on challenges and am always eager to learn new
               technologies and methodologies to enhance my skills and contribute effectively to innovative projects. My goal is to leverage my technical abilities and creative
               problem-solving skills to build impactful and user-centric applications.
             </p>
-            <h2 class="text-[#101817] text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5">Portfolio</h2>
+            <h2 data-lang="portfolio-title" class="text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5">Portfolio</h2>
             <div class="grid grid-cols-[repeat(auto-fit,minmax(158px,1fr))] gap-3 p-4">
               <div class="flex flex-col gap-3 pb-3">
                 <div
@@ -50,8 +69,8 @@
                   style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDvEIb0VXD5QqDhs6RGXUqQ8l2BpjwSFHVtzmT_Q2RzkdRUtCpm4ys6DQZ-zkCdSFOUxJuJXJGujpIp1Z2egbJBilSS-7Q7HPxIbKjjJdIMWDnPNffUt8DcCeIBc8Wa-4XLA-rtx5LeH_8-_pidIbsR-N4vLCPD0vie8v_mwlChc1GrK5YwQtS6_1XUfyOc3HFw670bAyG4k850xkfCpIowfanuHuqh05M8tQylGVYZtbksJf6Ti_RIVKJoIoYopKZaKnfknVk_cp_L");'
                 ></div>
                 <div>
-                  <p class="text-[#101817] text-base font-medium leading-normal">Project Phoenix</p>
-                  <p class="text-[#5c8a84] text-sm font-normal leading-normal">A web application for managing tasks efficiently.</p>
+                  <p class="text-base font-medium leading-normal">Project Phoenix</p>
+                  <p class="text-[#5c8a84] dark:text-[#a0d1cb] text-sm font-normal leading-normal">A web application for managing tasks efficiently.</p>
                 </div>
               </div>
               <div class="flex flex-col gap-3 pb-3">
@@ -60,27 +79,27 @@
                   style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAx5UOFNaPA1BrjE0tIVYg9gt19otOTPgaattJr-FsStNv7FhGjpCJrAci3xp-Nw-MXhmPFASlpGa0e7TFiQ56ejBlRo2h2vPYleLt5_Z6DtSIy7rtPPLqEINHrSyQmnZEs-BEzZoxyAkLKG1CqBW-hE-NcR-0nLKE8oalqlO48pQyT5bX1ZfD85Kr2c0L0-bmbyKLqjXgneOOwRnXsIrdnv31xsO6iMwKO99effXfrR97jMPKglpWLJcJIc695ynUO2mlGiVnRgwE_");'
                 ></div>
                 <div>
-                  <p class="text-[#101817] text-base font-medium leading-normal">Project Nova</p>
-                  <p class="text-[#5c8a84] text-sm font-normal leading-normal">A mobile app for tracking fitness goals.</p>
+                  <p class="text-base font-medium leading-normal">Project Nova</p>
+                  <p class="text-[#5c8a84] dark:text-[#a0d1cb] text-sm font-normal leading-normal">A mobile app for tracking fitness goals.</p>
                 </div>
               </div>
               <div class="flex flex-col gap-3 pb-3">
                 <div
                   class="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-xl"
-                  style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBNuar_hCR_va5OJ0UVtLoRqCGnezfEwb3bamIx535NdKckfXq5RxhreAESdD5hSk0tArX_Eq-3p44h1xeVScgkKPYa5POxjhRrzB_Z2ZA2yA7lCPoIK6qWBc4sT4NmxBuo7R9vU4XXe4IzX9dWqEYVrxJdyejlb74V9YP4FJmFqs-q_oKZzU3rGALQm1ZndvNw7zSIBYLnjrnrijBJt-RFrZ6zpMi0O1_HX4pkBm3UdYLEOik8fFd7c5RftSNYcgRlZdFjFpmiRe_X");'
+                  style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBNuar_hCR_va5OJ0UVtLoRqCgnezfEwb3bamIx535NdKckfXq5RxhreAESdD5hSk0tArX_Eq-3p44h1xeVScgkKPYa5POxjhRrzB_Z2ZA2yA7lCPoIK6qWBc4sT4NmxBuo7R9vU4XXe4IzX9dWqEYVrxJdyejlb74V9YP4FJmFqs-q_oKZzU3rGALQm1ZndvNw7zSIBYLnjrnrijBJt-RFrZ6zpMi0Vz_HX4pkBm3UdYLEOik8fFd7c5RftSNYcgRlZdFjFpmiRe_X");'
                 ></div>
                 <div>
-                  <p class="text-[#101817] text-base font-medium leading-normal">Project Nebula</p>
-                  <p class="text-[#5c8a84] text-sm font-normal leading-normal">A cloud-based platform for data analysis.</p>
+                  <p class="text-base font-medium leading-normal">Project Nebula</p>
+                  <p class="text-[#5c8a84] dark:text-[#a0d1cb] text-sm font-normal leading-normal">A cloud-based platform for data analysis.</p>
                 </div>
               </div>
             </div>
-            <h2 class="text-[#101817] text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5">Contact</h2>
+            <h2 data-lang="contact-title" class="text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5">Contact</h2>
             <div class="@container">
-              <div class="gap-2 px-4 grid-cols-[repeat(auto-fit, minmax(80px,_1fr))] grid">
-                <div class="flex flex-col items-center gap-2 bg-[#f9fbfb] py-2.5 text-center">
-                  <div class="rounded-full bg-[#eaf1f0] p-2.5">
-                    <div class="text-[#101817]" data-icon="LinkedinLogo" data-size="20px" data-weight="regular">
+              <div class="flex flex-row justify-center gap-4 px-4">
+                <div class="flex flex-col items-center gap-2 bg-[#f9fbfb] dark:bg-gray-800 py-2.5 text-center">
+                  <div class="rounded-full bg-[#eaf1f0] dark:bg-gray-700 p-2.5">
+                    <div class="text-[#101817] dark:text-gray-200" data-icon="LinkedinLogo" data-size="20px" data-weight="regular">
                       <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" fill="currentColor" viewBox="0 0 256 256">
                         <path
                           d="M216,24H40A16,16,0,0,0,24,40V216a16,16,0,0,0,16,16H216a16,16,0,0,0,16-16V40A16,16,0,0,0,216,24Zm0,192H40V40H216V216ZM96,112v64a8,8,0,0,1-16,0V112a8,8,0,0,1,16,0Zm88,28v36a8,8,0,0,1-16,0V140a20,20,0,0,0-40,0v36a8,8,0,0,1-16,0V112a8,8,0,0,1,15.79-1.78A36,36,0,0,1,184,140ZM100,84A12,12,0,1,1,88,72,12,12,0,0,1,100,84Z"
@@ -88,11 +107,11 @@
                       </svg>
                     </div>
                   </div>
-                  <p class="text-[#101817] text-sm font-medium leading-normal">LinkedIn</p>
+                  <p class="text-sm font-medium leading-normal">LinkedIn</p>
                 </div>
-                <div class="flex flex-col items-center gap-2 bg-[#f9fbfb] py-2.5 text-center">
-                  <div class="rounded-full bg-[#eaf1f0] p-2.5">
-                    <div class="text-[#101817]" data-icon="GithubLogo" data-size="20px" data-weight="regular">
+                <div class="flex flex-col items-center gap-2 bg-[#f9fbfb] dark:bg-gray-800 py-2.5 text-center">
+                  <div class="rounded-full bg-[#eaf1f0] dark:bg-gray-700 p-2.5">
+                    <div class="text-[#101817] dark:text-gray-200" data-icon="GithubLogo" data-size="20px" data-weight="regular">
                       <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" fill="currentColor" viewBox="0 0 256 256">
                         <path
                           d="M208.31,75.68A59.78,59.78,0,0,0,202.93,28,8,8,0,0,0,196,24a59.75,59.75,0,0,0-48,24H124A59.75,59.75,0,0,0,76,24a8,8,0,0,0-6.93,4,59.78,59.78,0,0,0-5.38,47.68A58.14,58.14,0,0,0,56,104v8a56.06,56.06,0,0,0,48.44,55.47A39.8,39.8,0,0,0,96,192v8H72a24,24,0,0,1-24-24A40,40,0,0,0,8,136a8,8,0,0,0,0,16,24,24,0,0,1,24,24,40,40,0,0,0,40,40H96v16a8,8,0,0,0,16,0V192a24,24,0,0,1,48,0v40a8,8,0,0,0,16,0V192a39.8,39.8,0,0,0-8.44-24.53A56.06,56.06,0,0,0,216,112v-8A58.14,58.14,0,0,0,208.31,75.68ZM200,112a40,40,0,0,1-40,40H112a40,40,0,0,1-40-40v-8a41.74,41.74,0,0,1,6.9-22.48A8,8,0,0,0,80,73.83a43.81,43.81,0,0,1,.79-33.58,43.88,43.88,0,0,1,32.32,20.06A8,8,0,0,0,119.82,64h32.35a8,8,0,0,0,6.74-3.69,43.87,43.87,0,0,1,32.32-20.06A43.81,43.81,0,0,1,192,73.83a8.09,8.09,0,0,0,1,7.65A41.72,41.72,0,0,1,200,104Z"
@@ -100,28 +119,86 @@
                       </svg>
                     </div>
                   </div>
-                  <p class="text-[#101817] text-sm font-medium leading-normal">GitHub</p>
+                  <p class="text-sm font-medium leading-normal">GitHub</p>
                 </div>
-                <div class="flex flex-col items-center gap-2 bg-[#f9fbfb] py-2.5 text-center">
-                  <div class="rounded-full bg-[#eaf1f0] p-2.5">
-                    <div class="text-[#101817]" data-icon="Phone" data-size="20px" data-weight="regular">
+                <div class="flex flex-col items-center gap-2 bg-[#f9fbfb] dark:bg-gray-800 py-2.5 text-center">
+                  <div class="rounded-full bg-[#eaf1f0] dark:bg-gray-700 p-2.5">
+                    <div class="text-[#101817] dark:text-gray-200" data-icon="Phone" data-size="20px" data-weight="regular">
                       <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" fill="currentColor" viewBox="0 0 256 256">
                         <path
-                          d="M222.37,158.46l-47.11-21.11-.13-.06a16,16,0,0,0-15.17,1.4,8.12,8.12,0,0,0-.75.56L134.87,160c-15.42-7.49-31.34-23.29-38.83-38.51l20.78-24.71c.2-.25.39-.5.57-.77a16,16,0,0,0,1.32-15.06l0-.12L97.54,33.64a16,16,0,0,0-16.62-9.52A56.26,56.26,0,0,0,32,80c0,79.4,64.6,144,144,144a56.26,56.26,0,0,0,55.88-48.92A16,16,0,0,0,222.37,158.46ZM176,208A128.14,128.14,0,0,1,48,80,40.2,40.2,0,0,1,82.87,40a.61.61,0,0,0,0,.12l21,47L83.2,111.86a6.13,6.13,0,0,0-.57.77,16,16,0,0,0-1,15.7c9.06,18.53,27.73,37.06,46.46,46.11a16,16,0,0,0,15.75-1.14,8.44,8.44,0,0,0,.74-.56L168.89,152l47,21.05h0s.08,0,.11,0A40.21,40.21,0,0,1,176,208Z"
+                          d="M222.37,158.46l-47.11-21.11-.13-.06a16,16,0,0,0-15.17,1.4,8.12,8.12,0,0,0-.75.56L134.87,160c-15.42-7.49-31.34-23.29-38.83-38.51l20.78-24.71c.2-.25.39-.5.57-.77a16,16,0,0,0,1.32-15.06l0-.12L97.54,33.64a16,16,0,0,0-16.62-9.52A56.26,56.26,0,0,0,32,80c0,79.4,64.6,144,144,144a56.26,56.26,0,0,0,55.88-48.92A16,16,0,0,0,222.37,158.46ZM176,208A128.14,128.14,0,0,1,48,80A40.2,40.2,0,0,1,82.87,40a.61.61,0,0,0,0,.12l21,47L83.2,111.86a6.13,6.13,0,0,0-.57.77,16,16,0,0,0-1,15.7c9.06,18.53,27.73,37.06,46.46,46.11a16,16,0,0,0,15.75-1.14,8.44,8.44,0,0,0,.74-.56L168.89,152l47,21.05h0s.08,0,.11,0A40.21,40.21,0,0,1,176,208Z"
                         ></path>
                       </svg>
                     </div>
                   </div>
-                  <p class="text-[#101817] text-sm font-medium leading-normal">Phone</p>
+                  <p class="text-sm font-medium leading-normal">Phone</p>
                 </div>
               </div>
             </div>
             <footer class="flex flex-col gap-6 px-5 py-10 text-center @container">
-              <p class="text-[#5c8a84] text-base font-normal leading-normal">© 2024 Ethan Carter. All rights reserved.</p>
+              <p data-lang="footer" class="text-[#5c8a84] dark:text-[#a0d1cb] text-base font-normal leading-normal">© 2024 Palermo Alessio. All rights reserved.</p>
             </footer>
           </div>
         </div>
       </div>
     </div>
+
+    <!-- Script per dark mode e language selector -->
+    <script>
+      // Dark mode toggle with checkbox
+      const toggleCheckbox = document.getElementById('dark-mode-toggle');
+      const htmlElement = document.documentElement;
+
+      // Carica preferenza da localStorage o sistema
+      if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+        htmlElement.classList.add('dark');
+        toggleCheckbox.checked = true;
+      } else {
+        htmlElement.classList.remove('dark');
+        toggleCheckbox.checked = false;
+      }
+
+      toggleCheckbox.addEventListener('change', () => {
+        if (toggleCheckbox.checked) {
+          htmlElement.classList.add('dark');
+          localStorage.theme = 'dark';
+        } else {
+          htmlElement.classList.remove('dark');
+          localStorage.theme = 'light';
+        }
+      });
+
+      // Language selector
+      const translations = {
+        en: {
+          'title': 'Software AI Engineer | Technician | Problem Solver',
+          'about-me-title': 'About Me',
+          'about-me': 'I am a passionate software engineer with a strong foundation in computer science and a proven track record of delivering high-quality software solutions. My expertise spans across various domains, including web development, mobile applications, and cloud computing. I thrive on challenges and am always eager to learn new technologies and methodologies to enhance my skills and contribute effectively to innovative projects. My goal is to leverage my technical abilities and creative problem-solving skills to build impactful and user-centric applications.',
+          'portfolio-title': 'Portfolio',
+          'contact-title': 'Contact',
+          'footer': '© 2024 Palermo Alessio. All rights reserved.'
+        },
+        it: {
+          'title': 'Ingegnere Software AI | Tecnico | Risolutore di Problemi',
+          'about-me-title': 'Su di Me',
+          'about-me': 'Sono un ingegnere software appassionato con una solida base in informatica e un track record comprovato nella consegna di soluzioni software di alta qualità. La mia expertise copre vari domini, inclusi sviluppo web, applicazioni mobile e cloud computing. Prosperò nelle sfide e sono sempre desideroso di imparare nuove tecnologie e metodologie per migliorare le mie abilità e contribuire efficacemente a progetti innovativi. Il mio obiettivo è sfruttare le mie abilità tecniche e le capacità creative di problem-solving per costruire applicazioni impactful e centrate sull\'utente.',
+          'portfolio-title': 'Portfolio',
+          'contact-title': 'Contatti',
+          'footer': '© 2024 Palermo Alessio. Tutti i diritti riservati.'
+        }
+      };
+
+      const languageSelector = document.getElementById('language-selector');
+      languageSelector.addEventListener('change', (event) => {
+        const lang = event.target.value;
+        document.querySelectorAll('[data-lang]').forEach(el => {
+          const key = el.getAttribute('data-lang');
+          if (translations[lang][key]) {
+            el.textContent = translations[lang][key];
+          }
+        });
+        document.documentElement.lang = lang; // Aggiorna lang attribute
+      });
+    </script>
   </body>
 </html>
