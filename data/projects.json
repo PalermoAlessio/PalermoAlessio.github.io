@@ -1,17 +1,17 @@
 {
   "projects": [
     {
-      "id": "project-phoenix",
-      "title": "Project Phoenix",
+      "id": "meshtastic-n8n-ai-bridge",
+      "title": "Meshtastic ↔ n8n AI Bridge",
       "description": {
-        "it": "Una web application per gestire le attività in modo efficiente.",
-        "en": "A web application for managing tasks efficiently."
+        "it": "Sistema intelligente che trasforma la tua rete Meshtastic LoRa in una rete di comunicazione automatizzata con intelligenza artificiale. Permette di creare bot AI che rispondono automaticamente ai messaggi ricevuti via radio, rendendo i nodi Meshtastic veri e propri assistenti virtuali distribuiti.",
+        "en": "Intelligent system that transforms your Meshtastic LoRa network into an automated communication network with artificial intelligence. It allows you to create AI bots that automatically respond to messages received via radio, making Meshtastic nodes true distributed virtual assistants."
       },
       "image": "project1.jpg",
       "imageOptimized": "project1.webp",
-      "technologies": ["JavaScript", "React", "Node.js"],
-      "github": "https://github.com/PalermoAlessio/project-phoenix",
-      "demo": "https://demo-phoenix.palermoalessio.com"
+      "technologies": ["Python", "Meshtastic", "n8n", "LoRa", "AI", "LLM"],
+      "github": "https://github.com/PalermoAlessio/Meshtastic-n8n-AI-Bridge",
+      "demo": null
     },
     {
       "id": "project-nova",

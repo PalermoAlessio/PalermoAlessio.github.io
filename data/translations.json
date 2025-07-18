@@ -17,16 +17,21 @@
     "sections": {
       "experience": {
         "items": [
-          "Sviluppo AI presso Tech Company, 2022-Presente: Progettazione di modelli LLM per applicazioni enterprise.",
-          "Tecnico Hardware presso Startup Innovativa, 2019-2022: Assemblaggio e ottimizzazione di sistemi hardware per IA.",
-          "Stagista in Sviluppo Software, 2018: Creazione di applicazioni web e mobile."
+          "Esperienza in AI e Machine Learning, Marzo 2023 - Presente.",
+          "Tecnico delle Telecomunicazioni presso Solutions30 Venaria, Marzo 2022 - Presente.",
+          "Giuntista Fibra Ottica presso Telimasud Turin, Novembre 2021 - Febbraio 2022.",
+          "Tecnico Manutenzione Elettrica presso TEKNOENGINEERING SRL Avellino, Aprile 2021 - Ottobre 2021.",
+          "Installatore/Manutentore Macchine Utensili Industriali presso GAMI Val Della Torre, Agosto 2020 - Aprile 2021.",
+          "Giuntista Fibra Ottica presso Aura Costruzioni SRL Collegno, Novembre 2019 - Agosto 2020.",
+          "Giuntista Fibra Ottica presso GDTelecomunicazioni Collegno, Aprile 2019 - Novembre 2019.",
+          "Attivatore FTTH presso NewTel Collegno, Agosto 2018 - Aprile 2019."
         ]
       },
       "skills": {
         "items": [
-          "Linguaggi: Python, JavaScript, C++",
-          "Tecnologie AI: LLM, Machine Learning, Deep Learning",
-          "Altri: Sviluppo Web, Cloud Computing, Problem Solving"
+          "LLM Development, GPT-4, Google Gemini, Anthropic Claude, LLaMA, RAG, Prompt Engineering, DeepSeek-R1, Ollama, Gradio",
+          "Linguaggi: Python, C/C++/C#/Java",
+          "Sistemi: PLC Programming, Telecommunications Systems, Network Infrastructure, Industrial Automation"
         ]
       }
     }
@@ -49,16 +54,21 @@
     "sections": {
       "experience": {
         "items": [
-          "AI Development at Tech Company, 2022-Present: Designing LLM models for enterprise applications.",
-          "Hardware Technician at Innovative Startup, 2019-2022: Assembly and optimization of hardware systems for AI.",
-          "Software Development Intern, 2018: Creation of web and mobile applications."
+          "AI and Machine Learning Experience, March 2023 - Present.",
+          "Telecommunications Technician at Solutions30 Venaria, March 2022 - Present.",
+          "Fiber Optic Jointer at Telimasud Turin, November 2021 - February 2022.",
+          "Electrical Maintenance Technician at TEKNOENGINEERING SRL Avellino, April 2021 - October 2021.",
+          "Industrial Machine Tool Installer/Maintainer at GAMI Val Della Torre, August 2020 - April 2021.",
+          "Fiber Optic Jointer at Aura Costruzioni SRL Collegno, November 2019 - August 2020.",
+          "Fiber Optic Jointer at GDTelecomunicazioni Collegno, April 2019 - November 2019.",
+          "FTTH Activator at NewTel Collegno, August 2018 - April 2019."
         ]
       },
       "skills": {
         "items": [
-          "Languages: Python, JavaScript, C++",
-          "AI Technologies: LLM, Machine Learning, Deep Learning",
-          "Others: Web Development, Cloud Computing, Problem Solving"
+          "LLM Development, GPT-4, Google Gemini, Anthropic Claude, LLaMA, RAG, Prompt Engineering, DeepSeek-R1, Ollama, Gradio",
+          "Languages: Python, C/C++/C#/Java",
+          "Systems: PLC Programming, Telecommunications Systems, Network Infrastructure, Industrial Automation"
         ]
       }
     }
