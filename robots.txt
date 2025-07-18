@@ -1,0 +1,9 @@
+User-agent: *
+Allow: /
+Disallow: /data/
+
+# Priorità per i crawler
+Crawl-delay: 1
+
+# Sitemap
+Sitemap: https://palermoalessio.com/sitemap.xml

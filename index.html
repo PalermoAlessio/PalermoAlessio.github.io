@@ -1,296 +1,261 @@
-<html lang="it">
-  <head>
-    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="" />
-    <link
-      rel="stylesheet"
-      as="style"
-      onload="this.rel='stylesheet'"
-      href="https://fonts.googleapis.com/css2?display=swap&family=Noto+Sans%3Awght%40400%3B500%3B700%3B900&family=Public+Sans%3Awght%40400%3B500%3B700%3B900"
-    />
+<!DOCTYPE html>
+<html lang="it" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Palermo Alessio</title>
-    <link rel="icon" type="image/x-icon" href="data:image/x-icon;base64," />
+  <!-- SEO Meta Tags Ottimizzati -->
+  <title>Palermo Alessio - Software AI Engineer | Portfolio Professionale</title>
+  <meta name="description" content="Portfolio di Alessio Palermo, Software AI Engineer specializzato in LLM, Machine Learning e sviluppo hardware. Scopri progetti innovativi e competenze tecniche.">
+  <meta name="keywords" content="Alessio Palermo, AI Engineer, Software Developer, LLM, Machine Learning, Python, JavaScript, Hardware Engineering, Portfolio">
+  <meta name="author" content="Alessio Palermo">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://palermoalessio.com/">
 
-    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-    <script>
-      tailwind.config = {
-        darkMode: 'class',
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://palermoalessio.com/">
+  <meta property="og:title" content="Palermo Alessio - Software AI Engineer">
+  <meta property="og:description" content="Portfolio di Alessio Palermo, Software AI Engineer specializzato in LLM e AI">
+  <meta property="og:image" content="https://palermoalessio.com/images/og-preview.jpg">
+  <meta property="og:locale" content="it_IT">
+  <meta property="og:locale:alternate" content="en_US">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Palermo Alessio - Software AI Engineer">
+  <meta name="twitter:description" content="Portfolio professionale - AI Engineer specializzato in LLM">
+  <meta name="twitter:image" content="https://palermoalessio.com/images/og-preview.jpg">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="data:image/x-icon;base64,">
+
+  <!-- Preload Critical Resources -->
+  <link rel="preload" href="/images/profile.webp" as="image" type="image/webp">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?display=swap&family=Public+Sans:wght@400;500;700;900&family=Noto+Sans:wght@400;500;700;900" rel="stylesheet">
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            primary: '#FA7F08',
+            'primary-dark': '#348888',
+            accent: '#5c8a84',
+            'accent-dark': '#a0d1cb'
+          }
+        }
       }
-    </script>
-  </head>
-  <body class="bg-[#f9fbfb] dark:bg-black text-[#101817] dark:text-gray-200" style='font-family: "Public Sans", "Noto Sans", sans-serif;'>
-    <div class="relative flex size-full min-h-screen flex-col group/design-root overflow-x-hidden">
-      <div class="layout-container flex h-full grow flex-col">
-        <!-- Toggle per dark mode e selettore lingua -->
-        <div class="flex justify-end px-4 py-2 gap-4 relative z-10">
-          <!-- Language selector button -->
-          <button id="lang-button" class="bg-white dark:bg-gray-800 text-[#101817] dark:text-gray-200 border border-gray-300 dark:border-gray-600 rounded px-3 py-1 flex items-center gap-1 hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors">
+    }
+  </script>
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/main.css">
+
+  <!-- Structured Data for SEO -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Alessio Palermo",
+    "jobTitle": "Software AI Engineer",
+    "description": "Software AI Engineer specializzato in LLM, Machine Learning e sviluppo hardware",
+    "url": "https://palermoalessio.com",
+    "image": "https://palermoalessio.com/images/profile.jpg",
+    "sameAs": [
+      "https://it.linkedin.com/in/alessio-palermo-41b306152",
+      "https://github.com/PalermoAlessio"
+    ],
+    "email": "alessiopalermo34@gmail.com",
+    "telephone": "+393468609789",
+    "address": {
+      "@type": "PostalAddress",
+      "addressCountry": "IT"
+    },
+    "knowsAbout": [
+      "Artificial Intelligence",
+      "Large Language Models",
+      "Machine Learning",
+      "Software Development",
+      "Hardware Engineering",
+      "Python Programming",
+      "JavaScript Development"
+    ],
+    "alumniOf": {
+      "@type": "EducationalOrganization",
+      "name": "Università di Informatica"
+    },
+    "worksFor": {
+      "@type": "Organization",
+      "name": "Tech Company"
+    }
+  }
+  </script>
+</head>
+
+<body class="bg-[#f9fbfb] dark:bg-black text-[#101817] dark:text-gray-200 transition-colors duration-300">
+
+  <!-- Skip Navigation for Accessibility -->
+  <a href="#main-content" class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-primary text-white px-4 py-2 rounded z-50">
+    Salta al contenuto principale
+  </a>
+
+  <div class="relative flex size-full min-h-screen flex-col">
+    <div class="layout-container flex h-full grow flex-col">
+
+      <!-- Navigation -->
+      <nav class="flex justify-end px-4 py-2 gap-4 relative z-10" role="navigation" aria-label="Controlli sito">
+        <!-- Language Selector -->
+        <div class="relative">
+          <button id="lang-button" class="bg-white dark:bg-gray-800 text-[#101817] dark:text-gray-200 border border-gray-300 dark:border-gray-600 rounded px-3 py-1 flex items-center gap-1 hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors" aria-haspopup="true" aria-expanded="false">
             <span id="current-lang">IT</span>
-            <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
             </svg>
           </button>
-          <!-- Language menu -->
           <div id="lang-menu" class="hidden absolute top-full right-0 mt-1 w-32 bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-600 rounded shadow-lg">
             <button class="block w-full px-4 py-2 text-left hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors" data-lang="en">EN</button>
             <button class="block w-full px-4 py-2 text-left hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors" data-lang="it">IT</button>
           </div>
-          <!-- Button for dark mode toggle with icons -->
-          <button id="theme-toggle" type="button" class="text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5">
-            <svg id="theme-toggle-dark-icon" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path></svg>
-            <svg id="theme-toggle-light-icon" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" fill-rule="evenodd" clip-rule="evenodd"></path></svg>
-          </button>
         </div>
-        <div class="px-40 flex flex-1 justify-center py-5">
-          <div class="layout-content-container flex flex-col max-w-[960px] flex-1">
-            <div class="@container">
-              <div class="@[480px]:px-4 @[480px]:py-3">
-                <div id="header-image"
-                  class="w-full bg-center bg-no-repeat bg-cover flex flex-col justify-end overflow-hidden bg-[#f9fbfb] dark:bg-gray-800 @[480px]:rounded-xl h-[400px] transition-height duration-400"
-                  style='background-image: url("images/profile.jpg");'
-                ></div>
-              </div>
+
+        <!-- Theme Toggle -->
+        <button id="theme-toggle" type="button" class="text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5" aria-label="Cambia tema">
+          <svg id="theme-toggle-dark-icon" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+            <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path>
+          </svg>
+          <svg id="theme-toggle-light-icon" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+            <path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" fill-rule="evenodd" clip-rule="evenodd"></path>
+          </svg>
+        </button>
+      </nav>
+
+      <!-- Main Content -->
+      <main id="main-content" class="px-4 lg:px-40 flex flex-1 justify-center py-5">
+        <div class="layout-content-container flex flex-col max-w-[960px] flex-1">
+
+          <!-- Header Section -->
+          <header class="@container" itemscope itemtype="https://schema.org/Person">
+            <div class="@[480px]:px-4 @[480px]:py-3">
+              <div id="header-image" class="w-full bg-center bg-no-repeat bg-cover flex flex-col justify-end overflow-hidden bg-[#f9fbfb] dark:bg-gray-800 @[480px]:rounded-xl h-[400px] transition-all duration-400 lazy-bg" data-bg="/images/profile.webp" data-bg-fallback="/images/profile.jpg"></div>
             </div>
-            <h1 data-lang="name" class="tracking-light text-[32px] font-bold leading-tight px-4 text-center pb-3 pt-6">Palermo Alessio</h1>
-            <p data-lang="title" class="text-[#5c8a84] dark:text-[#a0d1cb] text-sm font-normal leading-normal pb-3 pt-1 px-4 text-center">Software AI Engineer | Technician | Problem Solver</p>
+            <h1 class="tracking-light text-[32px] font-bold leading-tight px-4 text-center pb-3 pt-6" data-translate="name" itemprop="name">
+              Palermo Alessio
+            </h1>
+            <p class="text-accent dark:text-accent-dark text-sm font-normal leading-normal pb-3 pt-1 px-4 text-center" data-translate="title" itemprop="jobTitle">
+              Software AI Engineer | Technician | Problem Solver
+            </p>
             <div class="flex px-4 py-3 justify-center">
-              <a
-                href="https://it.linkedin.com/in/alessio-palermo-41b306152"
-                class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-10 px-4 bg-[#FA7F08] dark:bg-[#348888] text-[#101817] dark:text-gray-200 text-sm font-bold leading-normal tracking-[0.015em]"
-              >
-                <span class="truncate">LinkedIn</span>
+              <a href="https://www.linkedin.com/in/alessio-palermo-41b306152/" target="_blank" rel="noopener noreferrer" class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-10 px-4 bg-primary dark:bg-primary-dark text-white text-sm font-bold leading-normal tracking-[0.015em] hover:opacity-90 transition-opacity" aria-label="Visualizza profilo LinkedIn">
+                <span data-translate="cta">LinkedIn</span>
               </a>
             </div>
-            <h2 data-lang="about-me-title" class="text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5">About Me</h2>
-            <p data-lang="about-me" class="text-base font-normal leading-normal pb-3 pt-1 px-4">
-              Fin dai tempi della scuola, sviluppo progetti autonomi in software e hardware across diversi campi dell'informatica, con una specializzazione recente negli LLM e nelle IA in generale. Questo percorso ha affinato le mie capacità di problem solving e di adattamento a qualsiasi contesto aziendale o privato, sia individualmente che in team. Il mio approccio professionale è guidato da valori come puntualità, professionalità e spirito di adattamento, che mi permettono di trovare soluzioni ottimali anche con risorse limitate e di gestire efficacemente dinamiche di gruppo.
+          </header>
+
+          <!-- About Section -->
+          <section aria-labelledby="about-title">
+            <h2 id="about-title" class="text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5" data-translate="about-title">
+              About Me
+            </h2>
+            <p class="text-base font-normal leading-normal pb-3 pt-1 px-4" data-translate="about-content">
+              Fin dai tempi della scuola, sviluppo progetti autonomi in software e hardware across diversi campi dell'informatica, con una specializzazione recente negli LLM e nelle IA in generale.
             </p>
-            <!-- New section for Experience and Skills -->
-            <div class="flex flex-col md:flex-row gap-6 px-4 py-5">
-              <div class="flex-1">
-                <h3 data-lang="experience-title" class="text-[20px] font-bold leading-tight tracking-[-0.015em] pb-2">Esperienza</h3>
-                <ul class="list-disc pl-5 text-base font-normal leading-normal space-y-2">
-                  <li data-lang="experience-item1">Sviluppo AI presso Tech Company, 2022-Presente: Progettazione di modelli LLM per applicazioni enterprise.</li>
-                  <li data-lang="experience-item2">Tecnico Hardware presso Startup Innovativa, 2019-2022: Assemblaggio e ottimizzazione di sistemi hardware per IA.</li>
-                  <li data-lang="experience-item3">Stagista in Sviluppo Software, 2018: Creazione di applicazioni web e mobile.</li>
-                </ul>
-              </div>
-              <div class="flex-1">
-                <h3 data-lang="skills-title" class="text-[20px] font-bold leading-tight tracking-[-0.015em] pb-2">Competenze</h3>
-                <ul class="list-disc pl-5 text-base font-normal leading-normal space-y-2">
-                  <li data-lang="skills-item1">Linguaggi: Python, JavaScript, C++</li>
-                  <li data-lang="skills-item2">Tecnologie AI: LLM, Machine Learning, Deep Learning</li>
-                  <li data-lang="skills-item3">Altri: Sviluppo Web, Cloud Computing, Problem Solving</li>
-                </ul>
-              </div>
+          </section>
+
+          <!-- Experience & Skills Section -->
+          <section aria-labelledby="experience-title" class="flex flex-col md:flex-row gap-6 px-4 py-5">
+            <div class="flex-1">
+              <h3 id="experience-title" class="text-[20px] font-bold leading-tight tracking-[-0.015em] pb-2" data-translate="experience-title">
+                Esperienza
+              </h3>
+              <ul class="list-disc pl-5 text-base font-normal leading-normal space-y-2" id="experience-list">
+                <!-- Popolato dinamicamente -->
+              </ul>
             </div>
-            <h2 data-lang="portfolio-title" class="text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5">Portfolio</h2>
-            <div class="grid grid-cols-[repeat(auto-fit,minmax(158px,1fr))] gap-3 p-4">
-              <div class="flex flex-col gap-3 pb-3">
-                <div
-                  class="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-xl"
-                  style='background-image: url("images/project1.jpg");'
-                ></div>
-                <div>
-                  <p class="text-base font-medium leading-normal">Project Phoenix</p>
-                  <p class="text-[#5c8a84] dark:text-[#a0d1cb] text-sm font-normal leading-normal">A web application for managing tasks efficiently.</p>
-                </div>
-              </div>
-              <div class="flex flex-col gap-3 pb-3">
-                <div
-                  class="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-xl"
-                  style='background-image: url("images/project2.jpg");'
-                ></div>
-                <div>
-                  <p class="text-base font-medium leading-normal">Project Nova</p>
-                  <p class="text-[#5c8a84] dark:text-[#a0d1cb] text-sm font-normal leading-normal">A mobile app for tracking fitness goals.</p>
-                </div>
-              </div>
-              <div class="flex flex-col gap-3 pb-3">
-                <div
-                  class="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-xl"
-                  style='background-image: url("images/project3.jpg");'
-                ></div>
-                <div>
-                  <p class="text-base font-medium leading-normal">Project Nebula</p>
-                  <p class="text-[#5c8a84] dark:text-[#a0d1cb] text-sm font-normal leading-normal">A cloud-based platform for data analysis.</p>
-                </div>
-              </div>
+            <div class="flex-1">
+              <h3 class="text-[20px] font-bold leading-tight tracking-[-0.015em] pb-2" data-translate="skills-title">
+                Competenze
+              </h3>
+              <ul class="list-disc pl-5 text-base font-normal leading-normal space-y-2" id="skills-list">
+                <!-- Popolato dinamicamente -->
+              </ul>
             </div>
-            <h2 data-lang="contact-title" class="text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5">Contact</h2>
-            <div class="@container">
-              <div class="flex flex-row justify-center gap-4 px-4">
-                <a href="https://it.linkedin.com/in/alessio-palermo-41b306152" target="_blank" rel="noopener noreferrer" class="flex flex-col items-center gap-2 bg-[#f9fbfb] dark:bg-black py-2.5 text-center cursor-pointer">
-                  <div class="text-[#101817] dark:text-gray-200 p-2.5">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" fill="currentColor" viewBox="0 0 256 256">
-                      <path
-                        d="M216,24H40A16,16,0,0,0,24,40V216a16,16,0,0,0,16,16H216a16,16,0,0,0,16-16V40A16,16,0,0,0,216,24Zm0,192H40V40H216V216ZM96,112v64a8,8,0,0,1-16,0V112a8,8,0,0,1,16,0Zm88,28v36a8,8,0,0,1-16,0V140a20,20,0,0,0-40,0v36a8,8,0,0,1-16,0V112a8,8,0,0,1,15.79-1.78A36,36,0,0,1,184,140ZM100,84A12,12,0,1,1,88,72,12,12,0,0,1,100,84Z"
-                      ></path>
-                    </svg>
-                  </div>
-                  <p class="text-sm font-medium leading-normal">LinkedIn</p>
-                </a>
-                <a href="https://github.com/PalermoAlessio" target="_blank" rel="noopener noreferrer" class="flex flex-col items-center gap-2 bg-[#f9fbfb] dark:bg-black py-2.5 text-center cursor-pointer">
-                  <div class="text-[#101817] dark:text-gray-200 p-2.5">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" fill="currentColor" viewBox="0 0 256 256">
-                      <path
-                        d="M208.31,75.68A59.78,59.78,0,0,0,202.93,28,8,8,0,0,0,196,24a59.75,59.75,0,0,0-48,24H124A59.75,59.75,0,0,0,76,24a8,8,0,0,0-6.93,4,59.78,59.78,0,0,0-5.38,47.68A58.14,58.14,0,0,0,56,104v8a56.06,56.06,0,0,0,48.44,55.47A39.8,39.8,0,0,0,96,192v8H72a24,24,0,0,1-24-24A40,40,0,0,0,8,136a8,8,0,0,0,0,16,24,24,0,0,1,24,24,40,40,0,0,0,40,40H96v16a8,8,0,0,0,16,0V192a24,24,0,0,1,48,0v40a8,8,0,0,0,16,0V192a39.8,39.8,0,0,0-8.44-24.53A56.06,56.06,0,0,0,216,112v-8A58.14,58.14,0,0,0,208.31,75.68ZM200,112a40,40,0,0,1-40,40H112a40,40,0,0,1-40-40v-8a41.74,41.74,0,0,1,6.9-22.48A8,8,0,0,0,80,73.83a43.81,43.81,0,0,1,.79-33.58,43.88,43.88,0,0,1,32.32,20.06A8,8,0,0,0,119.82,64h32.35a8,8,0,0,0,6.74-3.69,43.87,43.87,0,0,1,32.32-20.06A43.81,43.81,0,0,1,192,73.83a8.09,8.09,0,0,0,1,7.65A41.72,41.72,0,0,1,200,104Z"
-                      ></path>
-                    </svg>
-                  </div>
-                  <p class="text-sm font-medium leading-normal">GitHub</p>
-                </a>
-                <a href="tel:+393468609789" class="flex flex-col items-center gap-2 bg-[#f9fbfb] dark:bg-black py-2.5 text-center cursor-pointer">
-                  <div class="text-[#101817] dark:text-gray-200 p-2.5">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" fill="currentColor" viewBox="0 0 256 256">
-                      <path
-                        d="M222.37,158.46l-47.11-21.11-.13-.06a16,16,0,0,0-15.17,1.4,8.12,8.12,0,0,0-.75.56L134.87,160c-15.42-7.49-31.34-23.29-38.83-38.51l20.78-24.71c.2-.25.39-.5.57-.77a16,16,0,0,0,1.32-15.06l0-.12L97.54,33.64a16,16,0,0,0-16.62-9.52A56.26,56.26,0,0,0,32,80c0,79.4,64.6,144,144,144a56.26,56.26,0,0,0,55.88-48.92A16,16,0,0,0,222.37,158.46ZM176,208A128.14,128.14,0,0,1,48,80A40.2,40.2,0,0,1,82.87,40a.61.61,0,0,0,0,.12l21,47L83.2,111.86a6.13,6.13,0,0,0-.57.77,16,16,0,0,0-1,15.7c9.06,18.53,27.73,37.06,46.46,46.11a16,16,0,0,0,15.75-1.14,8.44,8.44,0,0,0,.74-.56L168.89,152l47,21.05h0s.08,0,.11,0A40.21,40.21,0,0,1,176,208Z"
-                      ></path>
-                    </svg>
-                  </div>
-                  <p class="text-sm font-medium leading-normal">Phone</p>
-                </a>
-                <a href="mailto:alessiopalermo34@gmail.com" class="flex flex-col items-center gap-2 bg-[#f9fbfb] dark:bg-black py-2.5 text-center cursor-pointer">
-                  <div class="text-[#101817] dark:text-gray-200 p-2.5">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" fill="currentColor" viewBox="0 0 256 256">
-                      <path d="M224,48H32a8,8,0,0,0-8,8V192a16,16,0,0,0,16,16H216a16,16,0,0,0,16-16V56A8,8,0,0,0,224,48Zm0,152H32V64L128,152a8,8,0,0,0,8,0L224,64V128Z"></path>
-                    </svg>
-                  </div>
-                  <p class="text-sm font-medium leading-normal">Gmail</p>
-                </a>
-              </div>
+          </section>
+
+          <!-- Portfolio Section -->
+          <section aria-labelledby="portfolio-title">
+            <h2 id="portfolio-title" class="text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5" data-translate="portfolio-title">
+              Portfolio
+            </h2>
+            <div id="portfolio-grid" class="grid grid-cols-[repeat(auto-fit,minmax(280px,1fr))] gap-6 p-4">
+              <!-- Popolato dinamicamente -->
             </div>
-            <footer class="flex flex-col gap-6 px-5 py-10 text-center @container">
-              <p data-lang="footer" class="text-[#5c8a84] dark:text-[#a0d1cb] text-base font-normal leading-normal">© 2024 Palermo Alessio. All rights reserved.</p>
-            </footer>
-          </div>
+          </section>
+
+          <!-- Contact Section -->
+          <section aria-labelledby="contact-title">
+            <h2 id="contact-title" class="text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5" data-translate="contact-title">
+              Contact
+            </h2>
+            <div class="flex flex-row justify-center gap-4 px-4 flex-wrap">
+              <a href="https://it.linkedin.com/in/alessio-palermo-41b306152" target="_blank" rel="noopener noreferrer" class="flex flex-col items-center gap-2 py-2.5 text-center cursor-pointer hover:text-primary dark:hover:text-primary-dark transition-colors" aria-label="LinkedIn profile">
+                <div class="p-2.5">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" fill="currentColor" viewBox="0 0 256 256">
+                    <path d="M216,24H40A16,16,0,0,0,24,40V216a16,16,0,0,0,16,16H216a16,16,0,0,0,16-16V40A16,16,0,0,0,216,24Zm0,192H40V40H216V216ZM96,112v64a8,8,0,0,1-16,0V112a8,8,0,0,1,16,0Zm88,28v36a8,8,0,0,1-16,0V140a20,20,0,0,0-40,0v36a8,8,0,0,1-16,0V112a8,8,0,0,1,15.79-1.78A36,36,0,0,1,184,140ZM100,84A12,12,0,1,1,88,72,12,12,0,0,1,100,84Z"></path>
+                  </svg>
+                </div>
+                <p class="text-sm font-medium leading-normal">LinkedIn</p>
+              </a>
+
+              <a href="https://github.com/PalermoAlessio" target="_blank" rel="noopener noreferrer" class="flex flex-col items-center gap-2 py-2.5 text-center cursor-pointer hover:text-primary dark:hover:text-primary-dark transition-colors" aria-label="GitHub profile">
+                <div class="p-2.5">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" fill="currentColor" viewBox="0 0 256 256">
+                    <path d="M208.31,75.68A59.78,59.78,0,0,0,202.93,28,8,8,0,0,0,196,24a59.75,59.75,0,0,0-48,24H124A59.75,59.75,0,0,0,76,24a8,8,0,0,0-6.93,4,59.78,59.78,0,0,0-5.38,47.68A58.14,58.14,0,0,0,56,104v8a56.06,56.06,0,0,0,48.44,55.47A39.8,39.8,0,0,0,96,192v8H72a24,24,0,0,1-24-24A40,40,0,0,0,8,136a8,8,0,0,0,0,16,24,24,0,0,1,24,24,40,40,0,0,0,40,40H96v16a8,8,0,0,0,16,0V192a24,24,0,0,1,48,0v40a8,8,0,0,0,16,0V192a39.8,39.8,0,0,0-8.44-24.53A56.06,56.06,0,0,0,216,112v-8A58.14,58.14,0,0,0,208.31,75.68ZM200,112a40,40,0,0,1-40,40H112a40,40,0,0,1-40-40v-8a41.74,41.74,0,0,1,6.9-22.48A8,8,0,0,0,80,73.83a43.81,43.81,0,0,1,.79-33.58,43.88,43.88,0,0,1,32.32,20.06A8,8,0,0,0,119.82,64h32.35a8,8,0,0,0,6.74-3.69,43.87,43.87,0,0,1,32.32-20.06A43.81,43.81,0,0,1,192,73.83a8.09,8.09,0,0,0,1,7.65A41.72,41.72,0,0,1,200,104Z"></path>
+                  </svg>
+                </div>
+                <p class="text-sm font-medium leading-normal">GitHub</p>
+              </a>
+
+              <a href="tel:+393468609789" class="flex flex-col items-center gap-2 py-2.5 text-center cursor-pointer hover:text-primary dark:hover:text-primary-dark transition-colors" aria-label="Telefono">
+                <div class="p-2.5">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" fill="currentColor" viewBox="0 0 256 256">
+                    <path d="M222.37,158.46l-47.11-21.11-.13-.06a16,16,0,0,0-15.17,1.4,8.12,8.12,0,0,0-.75.56L134.87,160c-15.42-7.49-31.34-23.29-38.83-38.51l20.78-24.71c.2-.25.39-.5.57-.77a16,16,0,0,0,1.32-15.06l0-.12L97.54,33.64a16,16,0,0,0-16.62-9.52A56.26,56.26,0,0,0,32,80c0,79.4,64.6,144,144,144a56.26,56.26,0,0,0,55.88-48.92A16,16,0,0,0,222.37,158.46ZM176,208A128.14,128.0,0,0,1,48,80A40.2,40.2,0,0,1,82.87,40a.61.61,0,0,0,0,.12l21,47L83.2,111.86a6.13,6.13,0,0,0-.57.77,16,16,0,0,0-1,15.7c9.06,18.53,27.73,37.06,46.46,46.11a16,16,0,0,0,15.75-1.14,8.44,8.44,0,0,0,.74-.56L168.89,152l47,21.05h0s.08,0,.11,0A40.21,40.21,0,0,1,176,208Z"></path>
+                  </svg>
+                </div>
+                <p class="text-sm font-medium leading-normal">Phone</p>
+              </a>
+
+              <a href="mailto:alessiopalermo34@gmail.com" class="flex flex-col items-center gap-2 py-2.5 text-center cursor-pointer hover:text-primary dark:hover:text-primary-dark transition-colors" aria-label="Email">
+                <div class="p-2.5">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" fill="currentColor" viewBox="0 0 256 256">
+                    <path d="M224,48H32a8,8,0,0,0-8,8V192a16,16,0,0,0,16,16H216a16,16,0,0,0,16-16V56A8,8,0,0,0,224,48Zm0,152H32V64L128,152a8,8,0,0,0,8,0L224,64V128Z"></path>
+                  </svg>
+                </div>
+                <p class="text-sm font-medium leading-normal">Gmail</p>
+              </a>
+            </div>
+          </section>
         </div>
-      </div>
+      </main>
+
+      <!-- Footer -->
+      <footer class="flex flex-col gap-6 px-5 py-10 text-center">
+        <p class="text-accent dark:text-accent-dark text-base font-normal leading-normal" data-translate="footer">
+          © 2024 Palermo Alessio. All rights reserved.
+        </p>
+      </footer>
+
     </div>
+  </div>
 
-    <!-- Script per dark mode e language selector -->
-    <script>
-      // Dark mode toggle
-      const themeToggleDarkIcon = document.getElementById('theme-toggle-dark-icon');
-      const themeToggleLightIcon = document.getElementById('theme-toggle-light-icon');
-      const themeToggleBtn = document.getElementById('theme-toggle');
-      const htmlElement = document.documentElement;
-
-      // Initial setup
-      if (localStorage.getItem('color-theme') === 'dark' || (!('color-theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
-        htmlElement.classList.add('dark');
-        themeToggleLightIcon.classList.remove('hidden');
-      } else {
-        htmlElement.classList.remove('dark');
-        themeToggleDarkIcon.classList.remove('hidden');
-      }
-
-      themeToggleBtn.addEventListener('click', function() {
-        themeToggleDarkIcon.classList.toggle('hidden');
-        themeToggleLightIcon.classList.toggle('hidden');
-        if (localStorage.getItem('color-theme')) {
-          if (localStorage.getItem('color-theme') === 'light') {
-            htmlElement.classList.add('dark');
-            localStorage.setItem('color-theme', 'dark');
-          } else {
-            htmlElement.classList.remove('dark');
-            localStorage.setItem('color-theme', 'light');
-          }
-        } else {
-          if (htmlElement.classList.contains('dark')) {
-            htmlElement.classList.remove('dark');
-            localStorage.setItem('color-theme', 'light');
-          } else {
-            htmlElement.classList.add('dark');
-            localStorage.setItem('color-theme', 'dark');
-          }
-        }
-      });
-
-      // Shrink header on scroll
-      const headerImage = document.getElementById('header-image');
-      const initialHeight = 400; // Initial height in px
-      window.addEventListener('scroll', () => {
-        let scrollY = window.scrollY;
-        headerImage.style.height = Math.max(initialHeight - scrollY, 0) + 'px';
-      });
-
-      // Language selector
-      const translations = {
-        en: {
-          'title': 'Software AI Engineer | Technician | Problem Solver',
-          'about-me-title': 'About Me',
-          'about-me': 'Since school days, I have been developing autonomous projects in software and hardware across various fields of computer science, with a recent specialization in LLMs and AI in general. This path has honed my problem-solving skills and adaptability to any corporate or private context, both individually and in teams. My professional approach is guided by values such as punctuality, professionalism, and adaptability, which allow me to find optimal solutions even with limited resources and to effectively manage group dynamics.',
-          'experience-title': 'Experience',
-          'experience-item1': 'AI Development at Tech Company, 2022-Present: Designing LLM models for enterprise applications.',
-          'experience-item2': 'Hardware Technician at Innovative Startup, 2019-2022: Assembly and optimization of hardware systems for AI.',
-          'experience-item3': 'Software Development Intern, 2018: Creation of web and mobile applications.',
-          'skills-title': 'Skills',
-          'skills-item1': 'Languages: Python, JavaScript, C++',
-          'skills-item2': 'AI Technologies: LLM, Machine Learning, Deep Learning',
-          'skills-item3': 'Others: Web Development, Cloud Computing, Problem Solving',
-          'portfolio-title': 'Portfolio',
-          'contact-title': 'Contact',
-          'footer': '© 2024 Palermo Alessio. All rights reserved.'
-        },
-        it: {
-          'title': 'Ingegnere Software AI | Tecnico | Risolutore di Problemi',
-          'about-me-title': 'Su di Me',
-          'about-me': 'Fin dai tempi della scuola, sviluppo progetti autonomi in software e hardware across diversi campi dell\'informatica, con una specializzazione recente negli LLM e nelle IA in generale. Questo percorso ha affinato le mie capacità di problem solving e di adattamento a qualsiasi contesto aziendale o privato, sia individualmente che in team. Il mio approccio professionale è guidato da valori come puntualità, professionalità e spirito di adattamento, che mi permettono di trovare soluzioni ottimali anche con risorse limitate e di gestire efficacemente dinamiche di gruppo.',
-          'experience-title': 'Esperienza',
-          'experience-item1': 'Sviluppo AI presso Tech Company, 2022-Presente: Progettazione di modelli LLM per applicazioni enterprise.',
-          'experience-item2': 'Tecnico Hardware presso Startup Innovativa, 2019-2022: Assemblaggio e ottimizzazione di sistemi hardware per IA.',
-          'experience-item3': 'Stagista in Sviluppo Software, 2018: Creazione di applicazioni web e mobile.',
-          'skills-title': 'Competenze',
-          'skills-item1': 'Linguaggi: Python, JavaScript, C++',
-          'skills-item2': 'Tecnologie AI: LLM, Machine Learning, Deep Learning',
-          'skills-item3': 'Altri: Sviluppo Web, Cloud Computing, Problem Solving',
-          'portfolio-title': 'Portfolio',
-          'contact-title': 'Contatti',
-          'footer': '© 2024 Palermo Alessio. Tutti i diritti riservati.'
-        }
-      };
-
-      let currentLang = document.documentElement.lang || 'it';
-      document.getElementById('current-lang').textContent = currentLang.toUpperCase();
-
-      // Apply initial translations
-      document.querySelectorAll('[data-lang]').forEach(el => {
-        const key = el.getAttribute('data-lang');
-        if (translations[currentLang][key]) {
-          el.textContent = translations[currentLang][key];
-        }
-      });
-
-      const langButton = document.getElementById('lang-button');
-      const langMenu = document.getElementById('lang-menu');
-
-      langButton.addEventListener('click', (e) => {
-        e.stopPropagation();
-        langMenu.classList.toggle('hidden');
-      });
-
-      langMenu.querySelectorAll('button').forEach(btn => {
-        btn.addEventListener('click', (e) => {
-          const lang = e.target.getAttribute('data-lang');
-          document.querySelectorAll('[data-lang]').forEach(el => {
-            const key = el.getAttribute('data-lang');
-            if (translations[lang][key]) {
-              el.textContent = translations[lang][key];
-            }
-          });
-          document.documentElement.lang = lang;
-          document.getElementById('current-lang').textContent = lang.toUpperCase();
-          langMenu.classList.add('hidden');
-        });
-      });
-
-      // Close menu on outside click
-      document.addEventListener('click', (e) => {
-        if (!langButton.contains(e.target) && !langMenu.contains(e.target)) {
-          langMenu.classList.add('hidden');
-        }
-      });
-    </script>
-  </body>
+  <!-- JavaScript Files -->
+  <script src="js/main.js"></script>
+</body>
 </html>

@@ -1,0 +1,43 @@
+{
+  "projects": [
+    {
+      "id": "project-phoenix",
+      "title": "Project Phoenix",
+      "description": {
+        "it": "Una web application per gestire le attività in modo efficiente.",
+        "en": "A web application for managing tasks efficiently."
+      },
+      "image": "project1.jpg",
+      "imageOptimized": "project1.webp",
+      "technologies": ["JavaScript", "React", "Node.js"],
+      "github": "https://github.com/PalermoAlessio/project-phoenix",
+      "demo": "https://demo-phoenix.palermoalessio.com"
+    },
+    {
+      "id": "project-nova",
+      "title": "Project Nova",
+      "description": {
+        "it": "Una mobile app per tracciare gli obiettivi di fitness.",
+        "en": "A mobile app for tracking fitness goals."
+      },
+      "image": "project2.jpg",
+      "imageOptimized": "project2.webp",
+      "technologies": ["React Native", "Python", "Machine Learning"],
+      "github": "https://github.com/PalermoAlessio/project-nova",
+      "demo": null
+    },
+    {
+      "id": "project-nebula",
+      "title": "Project Nebula",
+      "description": {
+        "it": "Una piattaforma cloud-based per l'analisi dei dati.",
+        "en": "A cloud-based platform for data analysis."
+      },
+      "image": "project3.jpg",
+      "imageOptimized": "project3.webp",
+      "technologies": ["Python", "AWS", "TensorFlow"],
+      "github": "https://github.com/PalermoAlessio/project-nebula",
+      "demo": "https://demo-nebula.palermoalessio.com"
+    }
+  ]
+}

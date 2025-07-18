@@ -1,0 +1,66 @@
+{
+  "it": {
+    "meta": {
+      "title": "Palermo Alessio - Software AI Engineer | Portfolio Professionale",
+      "description": "Portfolio di Alessio Palermo, Software AI Engineer specializzato in LLM, Machine Learning e sviluppo hardware. Scopri progetti innovativi e competenze tecniche."
+    },
+    "name": "Palermo Alessio",
+    "title": "Ingegnere Software AI | Tecnico | Risolutore di Problemi",
+    "cta": "LinkedIn",
+    "about-title": "Su di Me",
+    "about-content": "Fin dai tempi della scuola, sviluppo progetti autonomi in software e hardware attraverso diversi campi dell'informatica, con una specializzazione recente negli LLM e nelle IA in generale. Questo percorso ha affinato le mie capacità di problem solving e di adattamento a qualsiasi contesto aziendale o privato, sia individualmente che in team.",
+    "experience-title": "Esperienza",
+    "skills-title": "Competenze",
+    "portfolio-title": "Portfolio",
+    "contact-title": "Contatti",
+    "footer": "© 2024 Palermo Alessio. Tutti i diritti riservati.",
+    "sections": {
+      "experience": {
+        "items": [
+          "Sviluppo AI presso Tech Company, 2022-Presente: Progettazione di modelli LLM per applicazioni enterprise.",
+          "Tecnico Hardware presso Startup Innovativa, 2019-2022: Assemblaggio e ottimizzazione di sistemi hardware per IA.",
+          "Stagista in Sviluppo Software, 2018: Creazione di applicazioni web e mobile."
+        ]
+      },
+      "skills": {
+        "items": [
+          "Linguaggi: Python, JavaScript, C++",
+          "Tecnologie AI: LLM, Machine Learning, Deep Learning",
+          "Altri: Sviluppo Web, Cloud Computing, Problem Solving"
+        ]
+      }
+    }
+  },
+  "en": {
+    "meta": {
+      "title": "Palermo Alessio - Software AI Engineer | Professional Portfolio",
+      "description": "Portfolio of Alessio Palermo, Software AI Engineer specialized in LLM, Machine Learning and hardware development. Discover innovative projects and technical skills."
+    },
+    "name": "Palermo Alessio",
+    "title": "Software AI Engineer | Technician | Problem Solver",
+    "cta": "LinkedIn",
+    "about-title": "About Me",
+    "about-content": "Since school days, I have been developing autonomous projects in software and hardware across various fields of computer science, with a recent specialization in LLMs and AI in general. This path has honed my problem-solving skills and adaptability to any corporate or private context, both individually and in teams.",
+    "experience-title": "Experience",
+    "skills-title": "Skills",
+    "portfolio-title": "Portfolio",
+    "contact-title": "Contact",
+    "footer": "© 2024 Palermo Alessio. All rights reserved.",
+    "sections": {
+      "experience": {
+        "items": [
+          "AI Development at Tech Company, 2022-Present: Designing LLM models for enterprise applications.",
+          "Hardware Technician at Innovative Startup, 2019-2022: Assembly and optimization of hardware systems for AI.",
+          "Software Development Intern, 2018: Creation of web and mobile applications."
+        ]
+      },
+      "skills": {
+        "items": [
+          "Languages: Python, JavaScript, C++",
+          "AI Technologies: LLM, Machine Learning, Deep Learning",
+          "Others: Web Development, Cloud Computing, Problem Solving"
+        ]
+      }
+    }
+  }
+}

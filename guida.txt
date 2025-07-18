@@ -1,0 +1,1037 @@
+# Portfolio Semplificato - Da Complex a GitHub Pages Ready
+
+## 🎯 Obiettivo della Semplificazione
+
+Trasformare il portfolio refactored complesso in una versione **ultra-ottimizzata** per GitHub Pages:
+- ❌ Zero dipendenze npm
+- ❌ Zero build system
+- ✅ File statici puri
+- ✅ SEO ottimizzato
+- ✅ Performance eccellenti
+- ✅ Facilissimo da mantenere
+
+---
+
+## 📁 Nuova Struttura Semplificata
+
+```
+portfolio-simple/
+├── index.html              # Single entry point ottimizzato
+├── css/
+│   ├── main.css            # CSS personalizzato minimo
+│   └── components.css      # Stili componenti
+├── js/
+│   ├── main.js            # JavaScript modulare semplice
+│   ├── theme.js           # Dark mode
+│   ├── language.js        # Multilingua
+│   └── animations.js     # Effetti scroll
+├── data/
+│   ├── translations.json  # Traduzioni
+│   └── projects.json     # Portfolio data
+├── images/
+│   ├── profile.jpg
+│   ├── profile.webp      # Versioni ottimizzate
+│   ├── project1.jpg
+│   ├── project1.webp
+│   └── ...
+├── robots.txt
+├── sitemap.xml
+└── README.md
+```
+
+---
+
+## 📄 File HTML Ottimizzato per SEO
+
+### index.html (Versione Semplificata)
+```html
+<!DOCTYPE html>
+<html lang="it" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- SEO Meta Tags Ottimizzati -->
+  <title>Palermo Alessio - Software AI Engineer | Portfolio Professionale</title>
+  <meta name="description" content="Portfolio di Alessio Palermo, Software AI Engineer specializzato in LLM, Machine Learning e sviluppo hardware. Scopri progetti innovativi e competenze tecniche.">
+  <meta name="keywords" content="Alessio Palermo, AI Engineer, Software Developer, LLM, Machine Learning, Python, JavaScript, Hardware Engineering, Portfolio">
+  <meta name="author" content="Alessio Palermo">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://palermoalessio.com/">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://palermoalessio.com/">
+  <meta property="og:title" content="Palermo Alessio - Software AI Engineer">
+  <meta property="og:description" content="Portfolio di Alessio Palermo, Software AI Engineer specializzato in LLM e AI">
+  <meta property="og:image" content="https://palermoalessio.com/images/og-preview.jpg">
+  <meta property="og:locale" content="it_IT">
+  <meta property="og:locale:alternate" content="en_US">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Palermo Alessio - Software AI Engineer">
+  <meta name="twitter:description" content="Portfolio professionale - AI Engineer specializzato in LLM">
+  <meta name="twitter:image" content="https://palermoalessio.com/images/og-preview.jpg">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="data:image/x-icon;base64,">
+
+  <!-- Preload Critical Resources -->
+  <link rel="preload" href="images/profile.webp" as="image" type="image/webp">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?display=swap&family=Public+Sans:wght@400;500;700;900&family=Noto+Sans:wght@400;500;700;900" rel="stylesheet">
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            primary: '#FA7F08',
+            'primary-dark': '#348888',
+            accent: '#5c8a84',
+            'accent-dark': '#a0d1cb'
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/main.css">
+
+  <!-- Structured Data for SEO -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Alessio Palermo",
+    "jobTitle": "Software AI Engineer",
+    "description": "Software AI Engineer specializzato in LLM, Machine Learning e sviluppo hardware",
+    "url": "https://palermoalessio.com",
+    "image": "https://palermoalessio.com/images/profile.jpg",
+    "sameAs": [
+      "https://it.linkedin.com/in/alessio-palermo-41b306152",
+      "https://github.com/PalermoAlessio"
+    ],
+    "email": "alessiopalermo34@gmail.com",
+    "telephone": "+393468609789",
+    "address": {
+      "@type": "PostalAddress",
+      "addressCountry": "IT"
+    },
+    "knowsAbout": [
+      "Artificial Intelligence",
+      "Large Language Models",
+      "Machine Learning",
+      "Software Development",
+      "Hardware Engineering",
+      "Python Programming",
+      "JavaScript Development"
+    ],
+    "alumniOf": {
+      "@type": "EducationalOrganization",
+      "name": "Università di Informatica"
+    },
+    "worksFor": {
+      "@type": "Organization",
+      "name": "Tech Company"
+    }
+  }
+  </script>
+</head>
+
+<body class="bg-[#f9fbfb] dark:bg-black text-[#101817] dark:text-gray-200 transition-colors duration-300">
+
+  <!-- Skip Navigation for Accessibility -->
+  <a href="#main-content" class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-primary text-white px-4 py-2 rounded z-50">
+    Salta al contenuto principale
+  </a>
+
+  <div class="relative flex size-full min-h-screen flex-col">
+    <div class="layout-container flex h-full grow flex-col">
+
+      <!-- Navigation -->
+      <nav class="flex justify-end px-4 py-2 gap-4 relative z-10" role="navigation" aria-label="Controlli sito">
+        <!-- Language Selector -->
+        <div class="relative">
+          <button id="lang-button" class="bg-white dark:bg-gray-800 text-[#101817] dark:text-gray-200 border border-gray-300 dark:border-gray-600 rounded px-3 py-1 flex items-center gap-1 hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors" aria-haspopup="true" aria-expanded="false">
+            <span id="current-lang">IT</span>
+            <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+            </svg>
+          </button>
+          <div id="lang-menu" class="hidden absolute top-full right-0 mt-1 w-32 bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-600 rounded shadow-lg">
+            <button class="block w-full px-4 py-2 text-left hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors" data-lang="en">EN</button>
+            <button class="block w-full px-4 py-2 text-left hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors" data-lang="it">IT</button>
+          </div>
+        </div>
+
+        <!-- Theme Toggle -->
+        <button id="theme-toggle" type="button" class="text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5" aria-label="Cambia tema">
+          <svg id="theme-toggle-dark-icon" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+            <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path>
+          </svg>
+          <svg id="theme-toggle-light-icon" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+            <path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" fill-rule="evenodd" clip-rule="evenodd"></path>
+          </svg>
+        </button>
+      </nav>
+
+      <!-- Main Content -->
+      <main id="main-content" class="px-4 lg:px-40 flex flex-1 justify-center py-5">
+        <div class="layout-content-container flex flex-col max-w-[960px] flex-1">
+
+          <!-- Header Section -->
+          <header class="@container" itemscope itemtype="https://schema.org/Person">
+            <div class="@[480px]:px-4 @[480px]:py-3">
+              <div id="header-image" class="w-full bg-center bg-no-repeat bg-cover flex flex-col justify-end overflow-hidden bg-[#f9fbfb] dark:bg-gray-800 @[480px]:rounded-xl h-[400px] transition-all duration-400 lazy-bg" data-bg="images/profile.webp" data-bg-fallback="images/profile.jpg"></div>
+            </div>
+            <h1 class="tracking-light text-[32px] font-bold leading-tight px-4 text-center pb-3 pt-6" data-translate="name" itemprop="name">
+              Palermo Alessio
+            </h1>
+            <p class="text-accent dark:text-accent-dark text-sm font-normal leading-normal pb-3 pt-1 px-4 text-center" data-translate="title" itemprop="jobTitle">
+              Software AI Engineer | Technician | Problem Solver
+            </p>
+            <div class="flex px-4 py-3 justify-center">
+              <a href="https://it.linkedin.com/in/alessio-palermo-41b306152" target="_blank" rel="noopener noreferrer" class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-10 px-4 bg-primary dark:bg-primary-dark text-white text-sm font-bold leading-normal tracking-[0.015em] hover:opacity-90 transition-opacity" aria-label="Visualizza profilo LinkedIn">
+                <span data-translate="cta">LinkedIn</span>
+              </a>
+            </div>
+          </header>
+
+          <!-- About Section -->
+          <section aria-labelledby="about-title">
+            <h2 id="about-title" class="text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5" data-translate="about-title">
+              About Me
+            </h2>
+            <p class="text-base font-normal leading-normal pb-3 pt-1 px-4" data-translate="about-content">
+              Fin dai tempi della scuola, sviluppo progetti autonomi in software e hardware across diversi campi dell'informatica, con una specializzazione recente negli LLM e nelle IA in generale.
+            </p>
+          </section>
+
+          <!-- Experience & Skills Section -->
+          <section aria-labelledby="experience-title" class="flex flex-col md:flex-row gap-6 px-4 py-5">
+            <div class="flex-1">
+              <h3 id="experience-title" class="text-[20px] font-bold leading-tight tracking-[-0.015em] pb-2" data-translate="experience-title">
+                Esperienza
+              </h3>
+              <ul class="list-disc pl-5 text-base font-normal leading-normal space-y-2" id="experience-list">
+                <!-- Popolato dinamicamente -->
+              </ul>
+            </div>
+            <div class="flex-1">
+              <h3 class="text-[20px] font-bold leading-tight tracking-[-0.015em] pb-2" data-translate="skills-title">
+                Competenze
+              </h3>
+              <ul class="list-disc pl-5 text-base font-normal leading-normal space-y-2" id="skills-list">
+                <!-- Popolato dinamicamente -->
+              </ul>
+            </div>
+          </section>
+
+          <!-- Portfolio Section -->
+          <section aria-labelledby="portfolio-title">
+            <h2 id="portfolio-title" class="text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5" data-translate="portfolio-title">
+              Portfolio
+            </h2>
+            <div id="portfolio-grid" class="grid grid-cols-[repeat(auto-fit,minmax(280px,1fr))] gap-6 p-4">
+              <!-- Popolato dinamicamente -->
+            </div>
+          </section>
+
+          <!-- Contact Section -->
+          <section aria-labelledby="contact-title">
+            <h2 id="contact-title" class="text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5" data-translate="contact-title">
+              Contact
+            </h2>
+            <div class="flex flex-row justify-center gap-4 px-4 flex-wrap">
+              <a href="https://it.linkedin.com/in/alessio-palermo-41b306152" target="_blank" rel="noopener noreferrer" class="flex flex-col items-center gap-2 py-2.5 text-center cursor-pointer hover:text-primary dark:hover:text-primary-dark transition-colors" aria-label="LinkedIn profile">
+                <div class="p-2.5">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" fill="currentColor" viewBox="0 0 256 256">
+                    <path d="M216,24H40A16,16,0,0,0,24,40V216a16,16,0,0,0,16,16H216a16,16,0,0,0,16-16V40A16,16,0,0,0,216,24Zm0,192H40V40H216V216ZM96,112v64a8,8,0,0,1-16,0V112a8,8,0,0,1,16,0Zm88,28v36a8,8,0,0,1-16,0V140a20,20,0,0,0-40,0v36a8,8,0,0,1-16,0V112a8,8,0,0,1,15.79-1.78A36,36,0,0,1,184,140ZM100,84A12,12,0,1,1,88,72,12,12,0,0,1,100,84Z"></path>
+                  </svg>
+                </div>
+                <p class="text-sm font-medium leading-normal">LinkedIn</p>
+              </a>
+
+              <a href="https://github.com/PalermoAlessio" target="_blank" rel="noopener noreferrer" class="flex flex-col items-center gap-2 py-2.5 text-center cursor-pointer hover:text-primary dark:hover:text-primary-dark transition-colors" aria-label="GitHub profile">
+                <div class="p-2.5">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" fill="currentColor" viewBox="0 0 256 256">
+                    <path d="M208.31,75.68A59.78,59.78,0,0,0,202.93,28,8,8,0,0,0,196,24a59.75,59.75,0,0,0-48,24H124A59.75,59.75,0,0,0,76,24a8,8,0,0,0-6.93,4,59.78,59.78,0,0,0-5.38,47.68A58.14,58.14,0,0,0,56,104v8a56.06,56.06,0,0,0,48.44,55.47A39.8,39.8,0,0,0,96,192v8H72a24,24,0,0,1-24-24A40,40,0,0,0,8,136a8,8,0,0,0,0,16,24,24,0,0,1,24,24,40,40,0,0,0,40,40H96v16a8,8,0,0,0,16,0V192a24,24,0,0,1,48,0v40a8,8,0,0,0,16,0V192a39.8,39.8,0,0,0-8.44-24.53A56.06,56.06,0,0,0,216,112v-8A58.14,58.14,0,0,0,208.31,75.68ZM200,112a40,40,0,0,1-40,40H112a40,40,0,0,1-40-40v-8a41.74,41.74,0,0,1,6.9-22.48A8,8,0,0,0,80,73.83a43.81,43.81,0,0,1,.79-33.58,43.88,43.88,0,0,1,32.32,20.06A8,8,0,0,0,119.82,64h32.35a8,8,0,0,0,6.74-3.69,43.87,43.87,0,0,1,32.32-20.06A43.81,43.81,0,0,1,192,73.83a8.09,8.09,0,0,0,1,7.65A41.72,41.72,0,0,1,200,104Z"></path>
+                  </svg>
+                </div>
+                <p class="text-sm font-medium leading-normal">GitHub</p>
+              </a>
+
+              <a href="tel:+393468609789" class="flex flex-col items-center gap-2 py-2.5 text-center cursor-pointer hover:text-primary dark:hover:text-primary-dark transition-colors" aria-label="Telefono">
+                <div class="p-2.5">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" fill="currentColor" viewBox="0 0 256 256">
+                    <path d="M222.37,158.46l-47.11-21.11-.13-.06a16,16,0,0,0-15.17,1.4,8.12,8.12,0,0,0-.75.56L134.87,160c-15.42-7.49-31.34-23.29-38.83-38.51l20.78-24.71c.2-.25.39-.5.57-.77a16,16,0,0,0,1.32-15.06l0-.12L97.54,33.64a16,16,0,0,0-16.62-9.52A56.26,56.26,0,0,0,32,80c0,79.4,64.6,144,144,144a56.26,56.26,0,0,0,55.88-48.92A16,16,0,0,0,222.37,158.46ZM176,208A128.14,128.14,0,0,1,48,80A40.2,40.2,0,0,1,82.87,40a.61.61,0,0,0,0,.12l21,47L83.2,111.86a6.13,6.13,0,0,0-.57.77,16,16,0,0,0-1,15.7c9.06,18.53,27.73,37.06,46.46,46.11a16,16,0,0,0,15.75-1.14,8.44,8.44,0,0,0,.74-.56L168.89,152l47,21.05h0s.08,0,.11,0A40.21,40.21,0,0,1,176,208Z"></path>
+                  </svg>
+                </div>
+                <p class="text-sm font-medium leading-normal">Phone</p>
+              </a>
+
+              <a href="mailto:alessiopalermo34@gmail.com" class="flex flex-col items-center gap-2 py-2.5 text-center cursor-pointer hover:text-primary dark:hover:text-primary-dark transition-colors" aria-label="Email">
+                <div class="p-2.5">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" fill="currentColor" viewBox="0 0 256 256">
+                    <path d="M224,48H32a8,8,0,0,0-8,8V192a16,16,0,0,0,16,16H216a16,16,0,0,0,16-16V56A8,8,0,0,0,224,48Zm0,152H32V64L128,152a8,8,0,0,0,8,0L224,64V128Z"></path>
+                  </svg>
+                </div>
+                <p class="text-sm font-medium leading-normal">Gmail</p>
+              </a>
+            </div>
+          </section>
+        </div>
+      </main>
+
+      <!-- Footer -->
+      <footer class="flex flex-col gap-6 px-5 py-10 text-center">
+        <p class="text-accent dark:text-accent-dark text-base font-normal leading-normal" data-translate="footer">
+          © 2024 Palermo Alessio. All rights reserved.
+        </p>
+      </footer>
+
+    </div>
+  </div>
+
+  <!-- JavaScript Files -->
+  <script src="js/main.js"></script>
+</body>
+</html>
+```
+
+---
+
+## 🎨 CSS Semplificato
+
+### css/main.css
+```css
+/* Utility classes per accessibility */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.focus\:not-sr-only:focus {
+  position: static;
+  width: auto;
+  height: auto;
+  padding: inherit;
+  margin: inherit;
+  overflow: visible;
+  clip: auto;
+  white-space: normal;
+}
+
+/* Smooth transitions per theme switching */
+body * {
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+/* Lazy loading images */
+.lazy-bg {
+  background-color: #f3f4f6;
+  background-image: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 225"%3E%3Crect width="100%25" height="100%25" fill="%23f3f4f6"/%3E%3Ctext x="50%25" y="50%25" dominant-baseline="middle" text-anchor="middle" fill="%236b7280"%3ECaricamento...%3C/text%3E%3C/svg%3E');
+}
+
+.lazy-bg.loaded {
+  background-image: var(--bg-image) !important;
+}
+
+/* Simple hover effects */
+.hover-scale:hover {
+  transform: scale(1.05);
+  transition: transform 0.2s ease;
+}
+
+/* Project cards */
+.project-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* Scroll animations */
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Custom scrollbar (optional) */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #c1c1c1;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #a1a1a1;
+}
+
+/* Dark mode scrollbar */
+.dark ::-webkit-scrollbar-track {
+  background: #374151;
+}
+
+.dark ::-webkit-scrollbar-thumb {
+  background: #6b7280;
+}
+
+.dark ::-webkit-scrollbar-thumb:hover {
+  background: #9ca3af;
+}
+```
+
+---
+
+## 🚀 JavaScript Modulare e Semplice
+
+### js/main.js
+```javascript
+// Main application - Coordina tutti i moduli
+class PortfolioApp {
+  constructor() {
+    this.currentLanguage = this.getStoredLanguage();
+    this.translations = null;
+    this.projects = null;
+    this.init();
+  }
+
+  async init() {
+    try {
+      // Carica i dati
+      await Promise.all([
+        this.loadTranslations(),
+        this.loadProjects()
+      ]);
+
+      // Inizializza i moduli
+      this.initTheme();
+      this.initLanguage();
+      this.initAnimations();
+      this.initLazyLoading();
+
+      // Popola il contenuto dinamico
+      this.populateContent();
+
+      // Setup event listeners
+      this.setupEventListeners();
+
+      console.log('Portfolio caricato con successo');
+    } catch (error) {
+      console.error('Errore durante l\'inizializzazione:', error);
+    }
+  }
+
+  async loadTranslations() {
+    try {
+      const response = await fetch('data/translations.json');
+      this.translations = await response.json();
+    } catch (error) {
+      console.error('Errore caricamento traduzioni:', error);
+      this.translations = { it: {}, en: {} };
+    }
+  }
+
+  async loadProjects() {
+    try {
+      const response = await fetch('data/projects.json');
+      this.projects = await response.json();
+    } catch (error) {
+      console.error('Errore caricamento progetti:', error);
+      this.projects = { projects: [] };
+    }
+  }
+
+  getStoredLanguage() {
+    const stored = localStorage.getItem('language');
+    if (stored) return stored;
+
+    const browserLang = navigator.language.split('-')[0];
+    return ['it', 'en'].includes(browserLang) ? browserLang : 'it';
+  }
+
+  initTheme() {
+    const stored = localStorage.getItem('theme');
+    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    const theme = stored || (prefersDark ? 'dark' : 'light');
+
+    this.setTheme(theme);
+  }
+
+  setTheme(theme) {
+    const html = document.documentElement;
+    const darkIcon = document.getElementById('theme-toggle-dark-icon');
+    const lightIcon = document.getElementById('theme-toggle-light-icon');
+
+    if (theme === 'dark') {
+      html.classList.add('dark');
+      darkIcon?.classList.add('hidden');
+      lightIcon?.classList.remove('hidden');
+    } else {
+      html.classList.remove('dark');
+      darkIcon?.classList.remove('hidden');
+      lightIcon?.classList.add('hidden');
+    }
+
+    localStorage.setItem('theme', theme);
+  }
+
+  initLanguage() {
+    this.setLanguage(this.currentLanguage);
+  }
+
+  setLanguage(lang) {
+    if (!this.translations || !this.translations[lang]) return;
+
+    this.currentLanguage = lang;
+    document.documentElement.lang = lang;
+
+    // Aggiorna selector lingua
+    const currentLangEl = document.getElementById('current-lang');
+    if (currentLangEl) {
+      currentLangEl.textContent = lang.toUpperCase();
+    }
+
+    // Aggiorna tutti gli elementi con data-translate
+    this.updateTranslations();
+
+    // Aggiorna meta tags
+    this.updateMetaTags(lang);
+
+    localStorage.setItem('language', lang);
+  }
+
+  updateTranslations() {
+    const elements = document.querySelectorAll('[data-translate]');
+    const translations = this.translations[this.currentLanguage];
+
+    elements.forEach(el => {
+      const key = el.getAttribute('data-translate');
+      const translation = this.getNestedValue(translations, key);
+      if (translation) {
+        el.textContent = translation;
+      }
+    });
+  }
+
+  updateMetaTags(lang) {
+    const translations = this.translations[lang];
+    if (!translations.meta) return;
+
+    if (translations.meta.title) {
+      document.title = translations.meta.title;
+    }
+
+    const metaDesc = document.querySelector('meta[name="description"]');
+    if (metaDesc && translations.meta.description) {
+      metaDesc.content = translations.meta.description;
+    }
+  }
+
+  getNestedValue(obj, path) {
+    return path.split('.').reduce((current, key) => current && current[key], obj);
+  }
+
+  populateContent() {
+    this.populateExperience();
+    this.populateSkills();
+    this.populateProjects();
+  }
+
+  populateExperience() {
+    const list = document.getElementById('experience-list');
+    if (!list || !this.translations) return;
+
+    const experiences = this.translations[this.currentLanguage]?.sections?.experience?.items || [];
+    list.innerHTML = experiences.map(exp => `<li>${exp}</li>`).join('');
+  }
+
+  populateSkills() {
+    const list = document.getElementById('skills-list');
+    if (!list || !this.translations) return;
+
+    const skills = this.translations[this.currentLanguage]?.sections?.skills?.items || [];
+    list.innerHTML = skills.map(skill => `<li>${skill}</li>`).join('');
+  }
+
+  populateProjects() {
+    const grid = document.getElementById('portfolio-grid');
+    if (!grid || !this.projects) return;
+
+    const projects = this.projects.projects || [];
+    grid.innerHTML = projects.map(project => this.createProjectCard(project)).join('');
+  }
+
+  createProjectCard(project) {
+    const description = project.description[this.currentLanguage] || project.description.it || 'Descrizione non disponibile';
+
+    return `
+      <div class="project-card bg-white dark:bg-gray-800 rounded-xl p-4 shadow-lg">
+        <div class="lazy-bg w-full aspect-video rounded-lg mb-3"
+             data-bg="images/${project.imageOptimized || project.image}"
+             data-bg-fallback="images/${project.image}">
+        </div>
+        <h3 class="text-lg font-semibold mb-2">${project.title}</h3>
+        <p class="text-gray-600 dark:text-gray-300 text-sm mb-3">${description}</p>
+        <div class="flex flex-wrap gap-2 mb-3">
+          ${(project.technologies || []).map(tech =>
+            `<span class="px-2 py-1 text-xs bg-gray-100 dark:bg-gray-700 rounded-full">${tech}</span>`
+          ).join('')}
+        </div>
+        <div class="flex gap-3">
+          ${project.github ? `<a href="${project.github}" target="_blank" rel="noopener" class="text-primary hover:underline text-sm">GitHub</a>` : ''}
+          ${project.demo ? `<a href="${project.demo}" target="_blank" rel="noopener" class="text-primary hover:underline text-sm">Demo</a>` : ''}
+        </div>
+      </div>
+    `;
+  }
+
+  initAnimations() {
+    // Effetto shrink header al scroll
+    const headerImage = document.getElementById('header-image');
+    if (headerImage) {
+      const initialHeight = 400;
+
+      window.addEventListener('scroll', () => {
+        const scrollY = window.pageYOffset;
+        const newHeight = Math.max(initialHeight - scrollY, 0);
+        headerImage.style.height = `${newHeight}px`;
+      }, { passive: true });
+    }
+
+    // Animazioni fade-in al scroll
+    this.setupScrollAnimations();
+  }
+
+  setupScrollAnimations() {
+    if (!('IntersectionObserver' in window)) return;
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1 });
+
+    // Aggiungi classe fade-in agli elementi che vuoi animare
+    const animatedElements = document.querySelectorAll('section, .project-card');
+    animatedElements.forEach(el => {
+      el.classList.add('fade-in');
+      observer.observe(el);
+    });
+  }
+
+  initLazyLoading() {
+    if (!('IntersectionObserver' in window)) {
+      // Fallback: carica tutto subito
+      this.loadAllImages();
+      return;
+    }
+
+    const imageObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          this.loadLazyImage(entry.target);
+          imageObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll('.lazy-bg').forEach(img => {
+      imageObserver.observe(img);
+    });
+  }
+
+  loadLazyImage(element) {
+    const bgImage = element.getAttribute('data-bg');
+    const fallback = element.getAttribute('data-bg-fallback');
+
+    if (!bgImage) return;
+
+    // Testa se WebP è supportato
+    const supportsWebP = this.supportsWebP();
+    const imageUrl = supportsWebP ? bgImage : (fallback || bgImage);
+
+    const img = new Image();
+    img.onload = () => {
+      element.style.setProperty('--bg-image', `url(${imageUrl})`);
+      element.classList.add('loaded');
+    };
+    img.onerror = () => {
+      if (fallback && imageUrl !== fallback) {
+        // Riprova con fallback
+        const fallbackImg = new Image();
+        fallbackImg.onload = () => {
+          element.style.setProperty('--bg-image', `url(${fallback})`);
+          element.classList.add('loaded');
+        };
+        fallbackImg.src = fallback;
+      }
+    };
+    img.src = imageUrl;
+  }
+
+  loadAllImages() {
+    document.querySelectorAll('.lazy-bg').forEach(img => {
+      this.loadLazyImage(img);
+    });
+  }
+
+  supportsWebP() {
+    const canvas = document.createElement('canvas');
+    canvas.width = 1;
+    canvas.height = 1;
+    return canvas.toDataURL('image/webp').indexOf('data:image/webp') === 0;
+  }
+
+  setupEventListeners() {
+    // Theme toggle
+    document.getElementById('theme-toggle')?.addEventListener('click', () => {
+      const currentTheme = localStorage.getItem('theme') || 'light';
+      this.setTheme(currentTheme === 'dark' ? 'light' : 'dark');
+    });
+
+    // Language selector
+    const langButton = document.getElementById('lang-button');
+    const langMenu = document.getElementById('lang-menu');
+
+    langButton?.addEventListener('click', (e) => {
+      e.stopPropagation();
+      langMenu?.classList.toggle('hidden');
+    });
+
+    langMenu?.addEventListener('click', (e) => {
+      const lang = e.target.getAttribute('data-lang');
+      if (lang) {
+        this.setLanguage(lang);
+        this.populateContent(); // Ricarica il contenuto dinamico
+        langMenu.classList.add('hidden');
+      }
+    });
+
+    // Chiudi menu lingua al click esterno
+    document.addEventListener('click', (e) => {
+      if (!e.target.closest('#lang-button') && !e.target.closest('#lang-menu')) {
+        langMenu?.classList.add('hidden');
+      }
+    });
+
+    // Smooth scrolling per anchor links
+    document.addEventListener('click', (e) => {
+      const anchor = e.target.closest('a[href^="#"]');
+      if (!anchor) return;
+
+      const href = anchor.getAttribute('href');
+      const target = document.querySelector(href);
+      if (target) {
+        e.preventDefault();
+        target.scrollIntoView({ behavior: 'smooth' });
+      }
+    });
+  }
+}
+
+// Inizializza l'app quando il DOM è pronto
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', () => new PortfolioApp());
+} else {
+  new PortfolioApp();
+}
+```
+
+---
+
+## 📊 File Dati Semplificati
+
+### data/translations.json
+```json
+{
+  "it": {
+    "meta": {
+      "title": "Palermo Alessio - Software AI Engineer | Portfolio Professionale",
+      "description": "Portfolio di Alessio Palermo, Software AI Engineer specializzato in LLM, Machine Learning e sviluppo hardware. Scopri progetti innovativi e competenze tecniche."
+    },
+    "name": "Palermo Alessio",
+    "title": "Ingegnere Software AI | Tecnico | Risolutore di Problemi",
+    "cta": "LinkedIn",
+    "about-title": "Su di Me",
+    "about-content": "Fin dai tempi della scuola, sviluppo progetti autonomi in software e hardware attraverso diversi campi dell'informatica, con una specializzazione recente negli LLM e nelle IA in generale. Questo percorso ha affinato le mie capacità di problem solving e di adattamento a qualsiasi contesto aziendale o privato, sia individualmente che in team.",
+    "experience-title": "Esperienza",
+    "skills-title": "Competenze",
+    "portfolio-title": "Portfolio",
+    "contact-title": "Contatti",
+    "footer": "© 2024 Palermo Alessio. Tutti i diritti riservati.",
+    "sections": {
+      "experience": {
+        "items": [
+          "Sviluppo AI presso Tech Company, 2022-Presente: Progettazione di modelli LLM per applicazioni enterprise.",
+          "Tecnico Hardware presso Startup Innovativa, 2019-2022: Assemblaggio e ottimizzazione di sistemi hardware per IA.",
+          "Stagista in Sviluppo Software, 2018: Creazione di applicazioni web e mobile."
+        ]
+      },
+      "skills": {
+        "items": [
+          "Linguaggi: Python, JavaScript, C++",
+          "Tecnologie AI: LLM, Machine Learning, Deep Learning",
+          "Altri: Sviluppo Web, Cloud Computing, Problem Solving"
+        ]
+      }
+    }
+  },
+  "en": {
+    "meta": {
+      "title": "Palermo Alessio - Software AI Engineer | Professional Portfolio",
+      "description": "Portfolio of Alessio Palermo, Software AI Engineer specialized in LLM, Machine Learning and hardware development. Discover innovative projects and technical skills."
+    },
+    "name": "Palermo Alessio",
+    "title": "Software AI Engineer | Technician | Problem Solver",
+    "cta": "LinkedIn",
+    "about-title": "About Me",
+    "about-content": "Since school days, I have been developing autonomous projects in software and hardware across various fields of computer science, with a recent specialization in LLMs and AI in general. This path has honed my problem-solving skills and adaptability to any corporate or private context, both individually and in teams.",
+    "experience-title": "Experience",
+    "skills-title": "Skills",
+    "portfolio-title": "Portfolio",
+    "contact-title": "Contact",
+    "footer": "© 2024 Palermo Alessio. All rights reserved.",
+    "sections": {
+      "experience": {
+        "items": [
+          "AI Development at Tech Company, 2022-Present: Designing LLM models for enterprise applications.",
+          "Hardware Technician at Innovative Startup, 2019-2022: Assembly and optimization of hardware systems for AI.",
+          "Software Development Intern, 2018: Creation of web and mobile applications."
+        ]
+      },
+      "skills": {
+        "items": [
+          "Languages: Python, JavaScript, C++",
+          "AI Technologies: LLM, Machine Learning, Deep Learning",
+          "Others: Web Development, Cloud Computing, Problem Solving"
+        ]
+      }
+    }
+  }
+}
+```
+
+### data/projects.json
+```json
+{
+  "projects": [
+    {
+      "id": "project-phoenix",
+      "title": "Project Phoenix",
+      "description": {
+        "it": "Una web application per gestire le attività in modo efficiente.",
+        "en": "A web application for managing tasks efficiently."
+      },
+      "image": "project1.jpg",
+      "imageOptimized": "project1.webp",
+      "technologies": ["JavaScript", "React", "Node.js"],
+      "github": "https://github.com/PalermoAlessio/project-phoenix",
+      "demo": "https://demo-phoenix.palermoalessio.com"
+    },
+    {
+      "id": "project-nova",
+      "title": "Project Nova",
+      "description": {
+        "it": "Una mobile app per tracciare gli obiettivi di fitness.",
+        "en": "A mobile app for tracking fitness goals."
+      },
+      "image": "project2.jpg",
+      "imageOptimized": "project2.webp",
+      "technologies": ["React Native", "Python", "Machine Learning"],
+      "github": "https://github.com/PalermoAlessio/project-nova",
+      "demo": null
+    },
+    {
+      "id": "project-nebula",
+      "title": "Project Nebula",
+      "description": {
+        "it": "Una piattaforma cloud-based per l'analisi dei dati.",
+        "en": "A cloud-based platform for data analysis."
+      },
+      "image": "project3.jpg",
+      "imageOptimized": "project3.webp",
+      "technologies": ["Python", "AWS", "TensorFlow"],
+      "github": "https://github.com/PalermoAlessio/project-nebula",
+      "demo": "https://demo-nebula.palermoalessio.com"
+    }
+  ]
+}
+```
+
+---
+
+## 🔍 File SEO
+
+### robots.txt
+```
+User-agent: *
+Allow: /
+Disallow: /data/
+
+# Priorità per i crawler
+Crawl-delay: 1
+
+# Sitemap
+Sitemap: https://palermoalessio.com/sitemap.xml
+```
+
+### sitemap.xml
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>https://palermoalessio.com/</loc>
+    <lastmod>2024-12-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://palermoalessio.com/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://palermoalessio.com/" />
+  </url>
+</urlset>
+```
+
+---
+
+## 🚀 Ottimizzazioni Performance
+
+### 1. **Compressione Immagini**
+```bash
+# Converti in WebP per performance migliori
+# Crea versioni ottimizzate delle tue immagini:
+
+# Per profile.jpg -> profile.webp (80% qualità)
+# Per project1.jpg -> project1.webp (80% qualità)
+# etc.
+```
+
+### 2. **Minificazione CSS/JS**
+```javascript
+// Per produzione, puoi minificare i file con strumenti online:
+// - CSS: https://cssminifier.com/
+// - JS: https://javascript-minifier.com/
+```
+
+### 3. **Preload Critical Resources**
+```html
+<!-- Già incluso nell'HTML -->
+<link rel="preload" href="images/profile.webp" as="image" type="image/webp">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+```
+
+---
+
+## 📈 Risultati Attesi
+
+### **SEO Score**
+- ✅ Meta tags completi
+- ✅ Structured data JSON-LD
+- ✅ Semantic HTML
+- ✅ Alt tags e ARIA labels
+- ✅ Sitemap XML
+
+### **Performance**
+- ✅ Lazy loading immagini
+- ✅ WebP con fallback
+- ✅ CSS/JS ottimizzato
+- ✅ Zero dipendenze npm
+- ✅ Bundle ultra-leggero
+
+### **Lighthouse Score Stimato**
+- **Performance**: 95+
+- **Accessibility**: 95+
+- **Best Practices**: 100
+- **SEO**: 100
+
+---
+
+## 🔄 Steps per la Migrazione
+
+### 1. **Backup**
+```bash
+cp -r portfolio-refactored portfolio-backup
+```
+
+### 2. **Pulizia Struttura**
+```bash
+# Rimuovi cartelle npm
+rm -rf node_modules/
+rm package.json vite.config.js tailwind.config.js
+
+# Mantieni solo file statici
+```
+
+### 3. **Reorganizza File**
+```bash
+# Sposta file nella nuova struttura semplificata
+mkdir css js data
+# Copia/modifica file secondo la guida
+```
+
+### 4. **Test Locale**
+```bash
+# Apri semplicemente index.html nel browser
+# Oppure usa Python per server locale:
+python -m http.server 8000
+```
+
+### 5. **Deploy GitHub Pages**
+```bash
+git add .
+git commit -m "Semplificazione per GitHub Pages"
+git push origin main
+```
+
+---
+
+## ✅ Checklist Finale
+
+- [ ] File statici puri (no build system)
+- [ ] SEO meta tags completi
+- [ ] Structured data JSON-LD
+- [ ] Lazy loading immagini
+- [ ] Dark mode funzionante
+- [ ] Multilingua IT/EN
+- [ ] Responsive design
+- [ ] Accessibility (ARIA, focus)
+- [ ] Performance ottimizzate
+- [ ] GitHub Pages ready
+
+---
+
+**Risultato**: Portfolio professionale, super-ottimizzato per SEO, ultra-leggero e perfetto per GitHub Pages! 🎯
