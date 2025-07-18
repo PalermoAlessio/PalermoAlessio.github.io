@@ -177,9 +177,10 @@ class PortfolioApp {
 
   createProjectCard(project) {
     const description = project.description[this.currentLanguage] || project.description.it || 'Descrizione non disponibile';
+    const githubLink = project.github || 'https://github.com/PalermoAlessio/placeholder-project'; // Placeholder for missing GitHub links
 
     return `
-      <div class="project-card bg-white dark:bg-gray-800 rounded-xl p-4 shadow-lg">
+      <a href="${githubLink}" target="_blank" rel="noopener noreferrer" class="project-card bg-white dark:bg-gray-800 rounded-xl p-4 shadow-lg block cursor-pointer hover:transform hover:translate-y-[-4px] hover:shadow-lg transition-all duration-300">
         <div class="lazy-bg w-full aspect-video rounded-lg mb-3"
              data-bg="/images/${project.imageOptimized || project.image}"
              data-bg-fallback="/images/${project.image}">
@@ -191,11 +192,8 @@ class PortfolioApp {
             `<span class="px-2 py-1 text-xs bg-gray-100 dark:bg-gray-700 rounded-full">${tech}</span>`
           ).join('')}
         </div>
-        <div class="flex gap-3">
-          ${project.github ? `<a href="${project.github}" target="_blank" rel="noopener" class="text-primary hover:underline text-sm">GitHub</a>` : ''}
-          ${project.demo ? `<a href="${project.demo}" target="_blank" rel="noopener" class="text-primary hover:underline text-sm">Demo</a>` : ''}
-        </div>
-      </div>
+        
+      </a>
     `;
   }
 
