@@ -47,7 +47,7 @@ class PortfolioApp {
 
   async loadProjects() {
     try {
-      const response = await fetch('data/projects.json');
+      const response = await fetch(`data/projects.json?v=${new Date().getTime()}`);
       this.projects = await response.json();
     } catch (error) {
       console.error('Errore caricamento progetti:', error);
