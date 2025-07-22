@@ -339,6 +339,7 @@ class PortfolioApp {
       if (lang) {
         this.setLanguage(lang);
         this.populateContent(); // Ricarica il contenuto dinamico
+        this.initLazyLoading(); // Re-inizializza il lazy loading per le nuove immagini
         langMenu.classList.add('hidden');
       }
     });
