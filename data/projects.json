@@ -27,17 +27,17 @@
       "demo": null
     },
     {
-      "id": "project-nebula",
-      "title": "Project Nebula",
+      "id": "tts-chrome-extension",
+      "title": "TTS Chrome Extension",
       "description": {
-        "it": "Una piattaforma cloud-based per l'analisi dei dati.",
-        "en": "A cloud-based platform for data analysis."
+        "it": "Un'estensione per Chrome leggera e potente che converte il testo selezionato in parlato utilizzando il modello TTS di Google Gemini 2.5 Flash. È dotata di una barra di controllo mobile e trascinabile per gestire la riproduzione audio (play/pausa, salto, controllo della velocità). Gli utenti possono attivarla facendo clic con il pulsante destro del mouse sul testo selezionato o utilizzando una scorciatoia da tastiera. L'estensione è costruita utilizzando il moderno standard Manifest V3 per le estensioni di Chrome.",
+        "en": "A lightweight and powerful Chrome extension that converts selected text into speech using Google's Gemini 2.5 Flash TTS model. It features a floating, draggable control bar to manage audio playback (play/pause, skip, speed control). Users can activate it by right-clicking selected text or using a keyboard shortcut. The extension is built using the modern Manifest V3 standard for Chrome extensions."
       },
       "image": "project3.jpg",
       "imageOptimized": "project3.webp",
-      "technologies": ["Python", "AWS", "TensorFlow"],
-      "github": "https://github.com/PalermoAlessio/project-nebula",
-      "demo": "https://demo-nebula.palermoalessio.com"
+      "technologies": ["JavaScript", "HTML", "CSS", "Chrome Extension", "Gemini API"],
+      "github": "https://github.com/PalermoAlessio/tts-chrome-extension",
+      "demo": null
     }
   ]
 }
