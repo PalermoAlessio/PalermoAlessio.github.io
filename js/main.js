@@ -234,18 +234,6 @@ class PortfolioApp {
   }
 
   initAnimations() {
-    // Effetto shrink header al scroll
-    const headerImage = document.getElementById('header-image');
-    if (headerImage) {
-      const initialHeight = 400;
-
-      window.addEventListener('scroll', () => {
-        const scrollY = window.pageYOffset;
-        const newHeight = Math.max(initialHeight - scrollY, 0);
-        headerImage.style.height = `${newHeight}px`;
-      }, { passive: true });
-    }
-
     // Animazioni fade-in al scroll
     this.setupScrollAnimations();
   }
