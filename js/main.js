@@ -23,8 +23,7 @@ class PortfolioApp {
       // Popola il contenuto dinamico
       this.populateContent();
 
-      // Inizializza il lazy loading dopo aver popolato il contenuto
-      this.initLazyLoading();
+      
 
       // Setup event listeners
       this.setupEventListeners();
@@ -111,6 +110,9 @@ class PortfolioApp {
     // Aggiorna meta tags
     this.updateMetaTags(lang);
 
+    // Aggiorna schema progetti
+    this.updateProjectSchema(lang);
+
     localStorage.setItem('language', lang);
   }
 
@@ -139,6 +141,37 @@ class PortfolioApp {
     if (metaDesc && translations.meta.description) {
       metaDesc.content = translations.meta.description;
     }
+  }
+
+  updateProjectSchema(lang) {
+    if (!this.projects || !this.projects.projects) return;
+
+    // Rimuovi lo schema precedente se esiste
+    const existingSchema = document.getElementById('project-schema');
+    if (existingSchema) {
+      existingSchema.remove();
+    }
+
+    const schema = {
+      "@context": "https://schema.org",
+      "@graph": this.projects.projects.map(project => ({
+        "@type": "SoftwareApplication",
+        "name": project.title,
+        "description": project.description[lang] || project.description.it,
+        "author": {
+          "@type": "Person",
+          "name": "Alessio Palermo"
+        },
+        "programmingLanguage": project.technologies,
+        "codeRepository": project.github
+      }))
+    };
+
+    const script = document.createElement('script');
+    script.type = 'application/ld+json';
+    script.id = 'project-schema';
+    script.text = JSON.stringify(schema);
+    document.head.appendChild(script);
   }
 
   getNestedValue(obj, path) {
@@ -178,14 +211,17 @@ class PortfolioApp {
   createProjectCard(project) {
     const description = project.description[this.currentLanguage] || project.description.it || 'Descrizione non disponibile';
     const githubLink = project.github || 'https://github.com/PalermoAlessio/placeholder-project'; // Placeholder for missing GitHub links
+    const imageSrc = `/images/${project.imageOptimized || project.image}`;
+    const altText = `${project.title} - ${description}`;
 
     return `
       <a href="${githubLink}" target="_blank" rel="noopener noreferrer" class="project-card bg-white dark:bg-gray-800 rounded-xl p-4 shadow-lg block cursor-pointer hover:transform hover:translate-y-[-4px] hover:shadow-lg transition-all duration-300">
-        <div class="lazy-bg w-full aspect-video rounded-lg mb-3"
-             data-bg="/images/${project.imageOptimized || project.image}"
-             data-bg-fallback="/images/${project.image}">
-        </div>
-        <h3 class="text-lg font-semibold mb-2">${project.title}</h3>
+        <img src="${imageSrc}" 
+             alt="${altText}"
+             class="w-full aspect-video rounded-lg mb-3 object-cover"
+             loading="lazy"
+             decoding="async">
+        <h4 class="text-lg font-semibold mb-2">${project.title}</h4>
         <p class="text-gray-600 dark:text-gray-300 text-sm mb-3">${description}</p>
         <div class="flex flex-wrap gap-2 mb-3">
           ${(project.technologies || []).map(tech =>
@@ -234,89 +270,7 @@ class PortfolioApp {
     });
   }
 
-  initLazyLoading() {
-    if (!('IntersectionObserver' in window)) {
-      // Fallback: carica tutto subito
-      this.loadAllImages();
-      return;
-    }
-
-    const imageObserver = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          this.loadLazyImage(entry.target);
-          imageObserver.unobserve(entry.target);
-        }
-      });
-    }, { threshold: 0.1 });
-
-    document.querySelectorAll('.lazy-bg').forEach(img => {
-      imageObserver.observe(img);
-    });
-  }
-
-  loadLazyImage(element) {
-    const bgImage = element.getAttribute('data-bg');
-    const fallback = element.getAttribute('data-bg-fallback');
-
-    console.log('loadLazyImage called for element:', element);
-    console.log('data-bg:', bgImage);
-    console.log('data-bg-fallback:', fallback);
-
-    if (!bgImage) {
-      console.log('No data-bg attribute found, returning.');
-      return;
-    }
-
-    // Testa se WebP è supportato
-    const supportsWebP = this.supportsWebP();
-    const imageUrl = supportsWebP ? bgImage : (fallback || bgImage);
-    console.log('WebP supported:', supportsWebP);
-    console.log('Final image URL:', imageUrl);
-
-    const img = new Image();
-    img.onload = () => {
-      console.log('Image loaded successfully:', imageUrl);
-      element.style.setProperty('--bg-image', `url(${imageUrl})`);
-      element.classList.add('loaded');
-      console.log('Loaded class added and --bg-image set.');
-    };
-    img.onerror = () => {
-      console.error('Error loading image:', imageUrl);
-      if (fallback && imageUrl !== fallback) {
-        console.log('Attempting to load fallback image:', fallback);
-        // Riprova con fallback
-        const fallbackImg = new Image();
-        fallbackImg.onload = () => {
-          console.log('Fallback image loaded successfully:', fallback);
-          element.style.setProperty('--bg-image', `url(${fallback})`);
-          element.classList.add('loaded');
-          console.log('Loaded class added and --bg-image set for fallback.');
-        };
-        fallbackImg.onerror = () => {
-          console.error('Error loading fallback image:', fallback);
-          element.classList.add('error'); // Add an error class for visual feedback
-        };
-        fallbackImg.src = fallback;
-      } else {
-        element.classList.add('error'); // Add an error class for visual feedback
-      }
-    };
-    img.src = imageUrl;
-  }
-
-  loadAllImages() {
-    document.querySelectorAll('.lazy-bg').forEach(img => {
-      this.loadLazyImage(img);
-    });
-  }
-
-  supportsWebP() {
-    const canvas = document.createElement('canvas');
-    canvas.width = 1;
-    canvas.height = 1;
-    return canvas.toDataURL('image/webp').indexOf('data:image/webp') === 0;
-  }
+  
 
   setupEventListeners() {
     // Theme toggle

@@ -32,6 +32,10 @@
 
   <!-- Preload Critical Resources -->
   <link rel="preload" href="/images/profile.webp" as="image" type="image/webp">
+  <link rel="preload" href="https://fonts.gstatic.com/s/publicsans/v20/ijwGs572Xtc6ZYQws9YVwllKVG8qX1oyOymuFpm5ww.ttf" as="font" type="font/ttf" crossorigin>
+  <link rel="preload" href="https://fonts.gstatic.com/s/publicsans/v20/ijwGs572Xtc6ZYQws9YVwllKVG8qX1oyOymu8Z65ww.ttf" as="font" type="font/ttf" crossorigin>
+  <link rel="preload" href="https://fonts.gstatic.com/s/notosans/v39/o-0mIpQlx3QUlC5A4PNB6Ryti20_6n1iPHjcz6L1SoM-jCpoiyD9A99d.ttf" as="font" type="font/ttf" crossorigin>
+  <link rel="preload" href="https://fonts.gstatic.com/s/notosans/v39/o-0mIpQlx3QUlC5A4PNB6Ryti20_6n1iPHjcz6L1SoM-jCpoiyAaBN9d.ttf" as="font" type="font/ttf" crossorigin>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
@@ -63,39 +67,53 @@
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "Person",
-    "name": "Alessio Palermo",
-    "jobTitle": "Software AI Engineer",
-    "description": "Software AI Engineer specializzato in LLM, Machine Learning e sviluppo hardware",
-    "url": "https://palermoalessio.com",
-    "image": "https://palermoalessio.com/images/profile.jpg",
-    "sameAs": [
-      "https://it.linkedin.com/in/alessio-palermo-41b306152",
-      "https://github.com/PalermoAlessio"
-    ],
-    "email": "alessiopalermo34@gmail.com",
-    "telephone": "+393468609789",
-    "address": {
-      "@type": "PostalAddress",
-      "addressCountry": "IT"
-    },
-    "knowsAbout": [
-      "Artificial Intelligence",
-      "Large Language Models",
-      "Machine Learning",
-      "Software Development",
-      "Hardware Engineering",
-      "Python Programming",
-      "JavaScript Development"
-    ],
-    "alumniOf": {
-      "@type": "EducationalOrganization",
-      "name": "Università di Informatica"
-    },
-    "worksFor": {
-      "@type": "Organization",
-      "name": "Tech Company"
-    }
+    "@graph": [
+      {
+        "@type": "Person",
+        "name": "Alessio Palermo",
+        "jobTitle": "Software AI Engineer",
+        "description": "Software AI Engineer specializzato in LLM, Machine Learning e sviluppo hardware",
+        "url": "https://palermoalessio.com",
+        "image": "https://palermoalessio.com/images/profile.jpg",
+        "sameAs": [
+          "https://it.linkedin.com/in/alessio-palermo-41b306152",
+          "https://github.com/PalermoAlessio"
+        ],
+        "email": "alessiopalermo34@gmail.com",
+        "telephone": "+393468609789",
+        "address": {
+          "@type": "PostalAddress",
+          "addressCountry": "IT"
+        },
+        "knowsAbout": [
+          "Artificial Intelligence",
+          "Large Language Models",
+          "Machine Learning",
+          "Software Development",
+          "Hardware Engineering",
+          "Python Programming",
+          "JavaScript Development"
+        ],
+        "alumniOf": {
+          "@type": "EducationalOrganization",
+          "name": "Università di Informatica"
+        },
+        "worksFor": {
+          "@type": "Organization",
+          "name": "Tech Company"
+        }
+      },
+      {
+        "@type": "WebSite",
+        "name": "Portfolio Alessio Palermo",
+        "url": "https://palermoalessio.com",
+        "potentialAction": {
+          "@type": "SearchAction",
+          "target": "https://palermoalessio.com/search?q={search_term_string}",
+          "query-input": "required name=search_term_string"
+        }
+      }
+    ]
   }
   </script>
 </head>
@@ -172,17 +190,17 @@
           <!-- Experience & Skills Section -->
           <section aria-labelledby="experience-title" class="flex flex-col md:flex-row gap-6 px-4 py-5">
             <div class="flex-1">
-              <h3 id="experience-title" class="text-[20px] font-bold leading-tight tracking-[-0.015em] pb-2" data-translate="experience-title">
+              <h2 id="experience-title" class="text-[20px] font-bold leading-tight tracking-[-0.015em] pb-2" data-translate="experience-title">
                 Esperienza
-              </h3>
+              </h2>
               <ul class="list-disc pl-5 text-base font-normal leading-normal space-y-2" id="experience-list">
                 <!-- Popolato dinamicamente -->
               </ul>
             </div>
             <div class="flex-1">
-              <h3 class="text-[20px] font-bold leading-tight tracking-[-0.015em] pb-2" data-translate="skills-title">
+              <h2 class="text-[20px] font-bold leading-tight tracking-[-0.015em] pb-2" data-translate="skills-title">
                 Competenze
-              </h3>
+              </h2>
               <ul class="list-disc pl-5 text-base font-normal leading-normal space-y-2" id="skills-list">
                 <!-- Popolato dinamicamente -->
               </ul>
@@ -265,6 +283,11 @@
 
       <!-- Footer -->
       <footer class="flex flex-col gap-6 px-5 py-10 text-center">
+        <div class="flex justify-center gap-4">
+          <a href="#about-title" class="hover:text-primary dark:hover:text-primary-dark transition-colors">About</a>
+          <a href="#portfolio-title" class="hover:text-primary dark:hover:text-primary-dark transition-colors">Portfolio</a>
+          <a href="#contact-title" class="hover:text-primary dark:hover:text-primary-dark transition-colors">Contatti</a>
+        </div>
         <p class="text-accent dark:text-accent-dark text-base font-normal leading-normal" data-translate="footer">
           © 2024 Palermo Alessio. All rights reserved.
         </p>
