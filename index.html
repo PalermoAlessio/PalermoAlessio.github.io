@@ -4,64 +4,64 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- SEO Meta Tags Ottimizzati -->
+  <!-- CRITICAL CSS INLINE - Aggiungi questo CSS direttamente nel head -->
+  <style>
+    /* Critical CSS per Above-the-fold */
+    body{margin:0;font-family:ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;background-color:#f9fbfb;color:#101817;transition:background-color .3s ease,color .3s ease}
+    .dark{background-color:#1a1a1a;color:#e5e7eb}
+    .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+    .layout-container{display:flex;min-height:100vh;flex-direction:column}
+    .profile-hero{width:100%;height:400px;position:relative;overflow:hidden;background-color:#f9fbfb}
+    .dark .profile-hero{background-color:#374151}
+    .profile-hero img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center}
+    .nav-container{display:flex;justify-content:flex-end;padding:0.5rem 1rem;gap:1rem;position:relative;z-index:10}
+    h1{font-size:2rem;font-weight:700;text-align:center;padding:1.5rem 1rem 0.75rem}
+    .text-accent{color:#F24405}
+    .dark .text-accent{color:#FF8C69}
+    @media (min-width: 480px) {
+      .profile-hero{border-radius:0.75rem}
+    }
+  </style>
+
+  <!-- SEO Meta Tags (no changes needed) -->
   <title>Palermo Alessio - Software AI Engineer | Portfolio Professionale</title>
   <meta name="description" content="Portfolio di Alessio Palermo, Software AI Engineer specializzato in LLM, Machine Learning e sviluppo hardware. Scopri progetti innovativi e competenze tecniche.">
-  <meta name="keywords" content="Alessio Palermo, AI Engineer, Software Developer, LLM, Machine Learning, Python, JavaScript, Hardware Engineering, Portfolio">
-  <meta name="author" content="Alessio Palermo">
-  <meta name="robots" content="index, follow">
-  <link rel="canonical" href="https://palermoalessio.com/">
-
-  <!-- Open Graph -->
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://palermoalessio.com/">
-  <meta property="og:title" content="Palermo Alessio - Software AI Engineer">
-  <meta property="og:description" content="Portfolio di Alessio Palermo, Software AI Engineer specializzato in LLM e AI">
-  <meta property="og:image" content="https://palermoalessio.com/images/og-preview.jpg">
-  <meta property="og:locale" content="it_IT">
-  <meta property="og:locale:alternate" content="en_US">
-
-  <!-- Twitter Card -->
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Palermo Alessio - Software AI Engineer">
-  <meta name="twitter:description" content="Portfolio professionale - AI Engineer specializzato in LLM">
-  <meta name="twitter:image" content="https://palermoalessio.com/images/og-preview.jpg">
-
-  <!-- Favicon -->
-  <link rel="icon" type="image/x-icon" href="data:image/x-icon;base64,">
-
-  <!-- Preload Critical Resources -->
-  <link rel="preload" href="/images/profile.webp" as="image" type="image/webp">
-  <link rel="preload" href="https://fonts.gstatic.com/s/publicsans/v20/ijwGs572Xtc6ZYQws9YVwllKVG8qX1oyOymuFpm5ww.ttf" as="font" type="font/ttf" crossorigin>
-  <link rel="preload" href="https://fonts.gstatic.com/s/publicsans/v20/ijwGs572Xtc6ZYQws9YVwllKVG8qX1oyOymu8Z65ww.ttf" as="font" type="font/ttf" crossorigin>
-  <link rel="preload" href="https://fonts.gstatic.com/s/notosans/v39/o-0mIpQlx3QUlC5A4PNB6Ryti20_6n1iPHjcz6L1SoM-jCpoiyD9A99d.ttf" as="font" type="font/ttf" crossorigin>
-  <link rel="preload" href="https://fonts.gstatic.com/s/notosans/v39/o-0mIpQlx3QUlC5A4PNB6Ryti20_6n1iPHjcz6L1SoM-jCpoiyAaBN9d.ttf" as="font" type="font/ttf" crossorigin>
+  
+  <!-- Preload ONLY critical resources -->
+  <link rel="preload" href="/images/profile.webp" as="image" type="image/webp" fetchpriority="high">
+  
+  <!-- Preconnect to external domains -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://cdn.tailwindcss.com">
 
-  <!-- Fonts -->
-  <link href="https://fonts.googleapis.com/css2?display=swap&family=Public+Sans:wght@400;500;700;900&family=Noto+Sans:wght@400;500;700;900" rel="stylesheet">
+  <!-- DEFER Google Fonts (non-critical) -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?display=swap&family=Public+Sans:wght@400;500;700;900&family=Noto+Sans:wght@400;500;700;900" media="print" onload="this.media='all'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?display=swap&family=Public+Sans:wght@400;500;700;900&family=Noto+Sans:wght@400;500;700;900"></noscript>
 
-  <!-- Tailwind CSS -->
-  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <!-- DEFER Tailwind (non-critical per above-the-fold) -->
   <script>
-    tailwind.config = {
-      darkMode: 'class',
-      theme: {
-        extend: {
-          colors: {
-            primary: '#348888',
-            'primary-dark': '#348888',
-            accent: '#F24405',
-            'accent-dark': '#FF8C69'
+    // Load Tailwind async
+    const tailwindScript = document.createElement('script');
+    tailwindScript.src = 'https://cdn.tailwindcss.com?plugins=forms,container-queries';
+    tailwindScript.async = true;
+    tailwindScript.onload = function() {
+      tailwind.config = {
+        darkMode: 'class',
+        theme: {
+          extend: {
+            colors: {
+              primary: '#348888',
+              'primary-dark': '#348888',
+              accent: '#F24405',
+              'accent-dark': '#FF8C69'
+            }
           }
         }
       }
-    }
+    };
+    document.head.appendChild(tailwindScript);
   </script>
-
-  <!-- Custom CSS -->
-  <link rel="stylesheet" href="css/main.css">
 
   <!-- Structured Data for SEO -->
   <script type="application/ld+json">
@@ -162,7 +162,21 @@
           <!-- Header Section -->
           <header class="@container" itemscope itemtype="https://schema.org/Person">
             <div class="@[480px]:px-4 @[480px]:py-3">
-              <img id="header-image" src="/images/profile.webp" alt="Alessio Palermo, Software AI Engineer" class="w-full h-[400px] @[480px]:rounded-xl object-cover transition-all duration-400">
+              <div class="w-full flex flex-col justify-end overflow-hidden bg-[#f9fbfb] dark:bg-gray-800 @[480px]:rounded-xl h-[400px] relative">
+                <!-- Preload dell'immagine critica -->
+                <img 
+                  src="/images/profile.webp" 
+                  alt="Alessio Palermo - Software AI Engineer specializzato in Large Language Models e sviluppo sistemi intelligenti, con background in telecomunicazioni e automazione industriale"
+                  class="absolute inset-0 w-full h-full object-cover object-center"
+                  style="content-visibility: auto; contain-intrinsic-size: 960px 400px; opacity:0;transition:opacity 0.3s ease"
+                  fetchpriority="high"
+                  decoding="async"
+                  onload="this.style.opacity=1"
+                  onerror="this.src='/images/profile.jpg'"
+                />
+                <!-- Fallback gradient -->
+                <div class="absolute inset-0 bg-gradient-to-t from-gray-900/20 to-transparent"></div>
+              </div>
             </div>
             <h1 class="tracking-light text-[32px] font-bold leading-tight px-4 text-center pb-3 pt-6" data-translate="name" itemprop="name">
               Palermo Alessio
@@ -297,6 +311,6 @@
   </div>
 
   <!-- JavaScript Files -->
-  <script src="js/main.js"></script>
+  <script defer src="js/main.js"></script>
 </body>
 </html>
