@@ -14,16 +14,16 @@
       "demo": null
     },
     {
-      "id": "project-nova",
-      "title": "Project Nova",
+      "id": "stem-solver-adk",
+      "title": "STEM Solver ADK",
       "description": {
-        "it": "Una mobile app per tracciare gli obiettivi di fitness.",
-        "en": "A mobile app for tracking fitness goals."
+        "it": "Un Agent Development Kit (ADK) per creare agenti autonomi e specializzati in grado di risolvere problemi STEM complessi. Sfrutta un'architettura modulare e si integra con strumenti come Wolfram Alpha per fornire soluzioni accurate e dettagliate.",
+        "en": "An Agent Development Kit (ADK) for creating autonomous, specialized agents capable of solving complex STEM problems. It leverages a modular architecture and integrates with tools like Wolfram Alpha to provide accurate and detailed solutions."
       },
       "image": "project2.jpg",
       "imageOptimized": "project2.webp",
-      "technologies": ["React Native", "Python", "Machine Learning"],
-      "github": "https://github.com/PalermoAlessio/project-nova",
+      "technologies": ["Python", "LangChain", "LLM", "Agent", "Wolfram Alpha"],
+      "github": "https://github.com/VerifyLoop/stem-solver-adk",
       "demo": null
     },
     {
