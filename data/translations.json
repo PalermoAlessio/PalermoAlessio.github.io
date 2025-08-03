@@ -1,74 +1,74 @@
 {
   "it": {
     "meta": {
-      "title": "Palermo Alessio | AI Developer",
-      "description": "Portfolio di Alessio Palermo, Software AI Engineer specializzato in LLM, Machine Learning e sviluppo hardware. Scopri progetti innovativi e competenze tecniche."
+      "title": "Palermo Alessio | LLM Expert",
+      "description": "Portfolio personale di Alessio Palermo — AI & Machine Learning Specialist (LLM, RAG, Agents). Progetti, percorso ed esperienze."
     },
     "name": "Palermo Alessio",
-    "title": "Ingegnere Software AI | Tecnico | Risolutore di Problemi",
+    "title": "I am a Machine Learning Specialist (LLM, RAG, Agents)",
     "cta": "LinkedIn",
     "about-title": "Su di Me",
-    "about-content": "Fin dai tempi della scuola, sviluppo progetti autonomi in software e hardware attraverso diversi campi dell'informatica, con una specializzazione recente negli LLM e nelle IA in generale. Questo percorso ha affinato le mie capacità di problem solving e di adattamento a qualsiasi contesto aziendale o privato, sia individualmente che in team.",
+    "about-content": "Fin dai tempi della scuola, sviluppo progetti autonomi in software e hardware in diversi ambiti dell'informatica. Oggi il mio focus è sull'integrazione di Large Language Models, Retrieval-Augmented Generation (RAG) e AI Agents per risolvere problemi reali in modo misurabile e scalabile, con una forte attenzione alla qualità e all’impatto pratico.",
     "experience-title": "Esperienza",
     "skills-title": "Competenze",
     "portfolio-title": "Portfolio",
     "contact-title": "Contatti",
-    "footer": "© 2024 Palermo Alessio. Tutti i diritti riservati.",
+    "footer": "© 2025 Palermo Alessio. Tutti i diritti riservati.",
     "sections": {
       "experience": {
         "items": [
-          "Esperienza in AI e Machine Learning, Marzo 2023 - Presente.",
-          "Tecnico delle Telecomunicazioni presso Solutions30 Venaria, Marzo 2022 - Presente.",
-          "Giuntista Fibra Ottica presso Telimasud Turin, Novembre 2021 - Febbraio 2022.",
-          "Tecnico Manutenzione Elettrica presso TEKNOENGINEERING SRL Avellino, Aprile 2021 - Ottobre 2021.",
-          "Installatore/Manutentore Macchine Utensili Industriali presso GAMI Val Della Torre, Agosto 2020 - Aprile 2021.",
-          "Giuntista Fibra Ottica presso Aura Costruzioni SRL Collegno, Novembre 2019 - Agosto 2020.",
-          "Giuntista Fibra Ottica presso GDTelecomunicazioni Collegno, Aprile 2019 - Novembre 2019.",
-          "Attivatore FTTH presso NewTel Collegno, Agosto 2018 - Aprile 2019."
+          "Consulente Tecnico AI e Machine Learning — Consulenza — Marzo 2023 – Presente",
+          "Tecnico Senior Telecomunicazioni — Solutions30 (Venaria) — Marzo 2022 – Presente",
+          "Giuntista Fibra Ottica — Varie aziende (Telimasud, Aura, GDTelecomunicazioni) — Aprile 2019 – Febbraio 2022",
+          "Tecnico Manutentore Elettrico / Installatore Macchine Industriali — TEKNOENGINEERING SRL / GAMI — Agosto 2020 – Ottobre 2021",
+          "Attivatore Delivery FTTH — NewTel (Collegno) — Agosto 2018 – Aprile 2019"
         ]
       },
       "skills": {
         "items": [
-          "LLM Development, GPT-4, Google Gemini, Anthropic Claude, LLaMA, RAG, Prompt Engineering, DeepSeek-R1, Ollama, Gradio",
-          "Linguaggi: Python, C/C++/C#/Java",
-          "Sistemi: PLC Programming, Telecommunications Systems, Network Infrastructure, Industrial Automation"
+          "AI & Machine Learning: Modelli Linguistici (GPT-4, Gemini, LLaMA, Mistral, ...), Reti Neurali, Apprendimento Supervisionato e Non, NLP, Computer Vision (principi), Prompt Engineering, RAG, Fine-Tuning, Architetture Server MCP",
+          "Linguaggi di Programmazione: Python, C/C++, C#, Java, JavaScript",
+          "Framework e Librerie: TensorFlow, PyTorch, Google ADK, LangChain, Scikit-learn, Pandas, NumPy, FastAPI",
+          "Cloud & DevOps: Google Cloud Platform (AI Studio, Vertex AI), Google Workspace, Jupyter, Docker, Git, GitHub, VS Code",
+          "Database: PostgreSQL, SQLite, Vector Databases",
+          "Sistemi e Altro: Linux (ArchLinux), Windows, Android, Apple, Programmazione PLC, Reti TLC, Automazione Industriale"
         ]
       }
     }
   },
   "en": {
     "meta": {
-      "title": "Palermo Alessio | AI Developer",
-      "description": "Portfolio of Alessio Palermo, Software AI Engineer specialized in LLM, Machine Learning and hardware development. Discover innovative projects and technical skills."
+      "title": "Palermo Alessio | LLM Expert",
+      "description": "Personal portfolio of Alessio Palermo — AI & Machine Learning Specialist (LLM, RAG, Agents). Projects, background and experience."
     },
     "name": "Palermo Alessio",
-    "title": "Software AI Engineer | Technician | Problem Solver",
+    "title": "I am a Machine Learning Specialist (LLM, RAG, Agents)",
     "cta": "LinkedIn",
     "about-title": "About Me",
-    "about-content": "Since school days, I have been developing autonomous projects in software and hardware across various fields of computer science, with a recent specialization in LLMs and AI in general. This path has honed my problem-solving skills and adaptability to any corporate or private context, both individually and in teams.",
+    "about-content": "Since school days, I’ve been building autonomous software and hardware projects across different areas of computer science. Today I focus on integrating Large Language Models, Retrieval-Augmented Generation (RAG) and AI Agents to solve real problems in measurable, scalable ways with a strong emphasis on quality and practical impact.",
     "experience-title": "Experience",
     "skills-title": "Skills",
     "portfolio-title": "Portfolio",
     "contact-title": "Contact",
-    "footer": "© 2024 Palermo Alessio. All rights reserved.",
+    "footer": "© 2025 Palermo Alessio. All rights reserved.",
     "sections": {
       "experience": {
         "items": [
-          "AI and Machine Learning Experience, March 2023 - Present.",
-          "Telecommunications Technician at Solutions30 Venaria, March 2022 - Present.",
-          "Fiber Optic Jointer at Telimasud Turin, November 2021 - February 2022.",
-          "Electrical Maintenance Technician at TEKNOENGINEERING SRL Avellino, April 2021 - October 2021.",
-          "Industrial Machine Tool Installer/Maintainer at GAMI Val Della Torre, August 2020 - April 2021.",
-          "Fiber Optic Jointer at Aura Costruzioni SRL Collegno, November 2019 - August 2020.",
-          "Fiber Optic Jointer at GDTelecomunicazioni Collegno, April 2019 - November 2019.",
-          "FTTH Activator at NewTel Collegno, August 2018 - April 2019."
+          "AI & Machine Learning Technical Consultant — Consulting — March 2023 – Present",
+          "Senior Telecommunications Technician — Solutions30 (Venaria) — March 2022 – Present",
+          "Fiber Optic Jointer — Various (Telimasud, Aura, GDTelecomunicazioni) — April 2019 – February 2022",
+          "Electrical Maintenance Technician / Industrial Machine Installer — TEKNOENGINEERING SRL / GAMI — August 2020 – October 2021",
+          "FTTH Activator — NewTel (Collegno) — August 2018 – April 2019"
         ]
       },
       "skills": {
         "items": [
-          "LLM Development, GPT-4, Google Gemini, Anthropic Claude, LLaMA, RAG, Prompt Engineering, DeepSeek-R1, Ollama, Gradio",
-          "Languages: Python, C/C++/C#/Java",
-          "Systems: PLC Programming, Telecommunications Systems, Network Infrastructure, Industrial Automation"
+          "AI & Machine Learning: Large Language Models (GPT-4, Gemini, LLaMA, Mistral, ...), Neural Networks, Supervised & Unsupervised Learning, NLP, Computer Vision (basics), Prompt Engineering, RAG, Fine-Tuning, MCP Server Architectures",
+          "Programming Languages: Python, C/C++, C#, Java, JavaScript",
+          "Frameworks & Libraries: TensorFlow, PyTorch, Google ADK, LangChain, Scikit-learn, Pandas, NumPy, FastAPI",
+          "Cloud & DevOps: Google Cloud Platform (AI Studio, Vertex AI), Google Workspace, Jupyter, Docker, Git, GitHub, VS Code",
+          "Databases: PostgreSQL, SQLite, Vector Databases",
+          "Systems & Other: Linux (ArchLinux), Windows, Android, Apple, PLC Programming, Telco Networks, Industrial Automation"
         ]
       }
     }
