@@ -5,7 +5,7 @@
                       "description": "Portfolio di Alessio Palermo, Software AI Engineer specializzato in LLM, Machine Learning e sviluppo hardware. Scopri progetti innovativi e competenze tecniche."
                     },
                     "name": "Palermo Alessio",
-                    "title": "I am a Machine Learning Specialist (LLM, RAG, Agents)",
+                    "title": "LLM Specialist",
                     "cta": "LinkedIn",
                     "about-title": "Su di Me",
                     "about-content": "Fin dai tempi della scuola, sviluppo progetti autonomi in software e hardware. Oggi mi occupo soprattutto di AI applicata: lavoro con Large Language Models (LLM) e architetture RAG, progetto agenti AI e automazioni su misura. Unisco un background operativo in telecomunicazioni e automazione industriale alla capacità di tradurre esigenze reali in soluzioni tecniche misurabili.",
@@ -28,7 +28,7 @@
                         "items": [
                           "AI & Machine Learning: Modelli Linguistici (GPT-4, Gemini, LLaMA, Mistral, ...), Reti Neurali, Apprendimento Supervisionato e Non, NLP, Computer Vision (principi), Prompt Engineering, RAG, Fine-Tuning, Architetture Server MCP.",
                           "Linguaggi di Programmazione: Python, C/C++, C#, Java, JavaScript.",
-                          "Framework e Librerie: TensorFlow, PyTorch, Google ADK, LangChain, Scikit-learn, Pandas, NumPy, FastAPI.",
+                          "Framework e Librerie: TensorFlow, PyTorch, Google ADK, Scikit-learn, Pandas, NumPy, FastAPI.",
                           "Cloud & DevOps: Google Cloud Platform (AI Studio, Vertex AI), Google Workspace, Jupyter, Docker, Git, GitHub, VS Code.",
                           "Database: PostgreSQL, SQLite, Vector Databases.",
                           "Sistemi e Altro: Linux (ArchLinux), Windows, Android, Apple, Programmazione PLC, Reti TLC, Automazione Industriale."
@@ -42,7 +42,7 @@
                       "description": "Portfolio of Alessio Palermo, Software AI Engineer specialized in LLM, Machine Learning and hardware development. Discover innovative projects and technical skills."
                     },
                     "name": "Palermo Alessio",
-                    "title": "I am a Machine Learning Specialist (LLM, RAG, Agents)",
+                    "title": "LLM Specialist",
                     "cta": "LinkedIn",
                     "about-title": "About Me",
                     "about-content": "Since school, I've been building autonomous software and hardware projects. Today I focus on applied AI: Large Language Models (LLM), RAG architectures, AI agents and custom automations. I bring a hands-on background in telecommunications and industrial automation, translating real needs into measurable technical solutions.",
@@ -65,7 +65,7 @@
                         "items": [
                           "AI & Machine Learning: Language Models (GPT-4, Gemini, LLaMA, Mistral, ...), Neural Networks, Supervised & Unsupervised Learning, NLP, basic Computer Vision, Prompt Engineering, RAG, Fine-Tuning, MCP Server Architectures.",
                           "Programming Languages: Python, C/C++, C#, Java, JavaScript.",
-                          "Frameworks & Libraries: TensorFlow, PyTorch, Google ADK, LangChain, scikit-learn, Pandas, NumPy, FastAPI.",
+                          "Frameworks & Libraries: TensorFlow, PyTorch, Google ADK, scikit-learn, Pandas, NumPy, FastAPI.",
                           "Cloud & DevOps: Google Cloud Platform (AI Studio, Vertex AI), Google Workspace, Jupyter, Docker, Git, GitHub, VS Code.",
                           "Databases: PostgreSQL, SQLite, Vector Databases.",
                           "Systems & Other: Linux (ArchLinux), Windows, Android, Apple, PLC programming, Telecommunications networks, Industrial automation."

@@ -1,4 +1,4 @@
-// Main application - Coordina tutti i moduli
+// Main application - Coordinates all modules
 class PortfolioApp {
   constructor() {
     this.currentLanguage = this.getStoredLanguage();
@@ -9,18 +9,18 @@ class PortfolioApp {
 
   async init() {
     try {
-      // Carica i dati
+      // Load data
       await Promise.all([
         this.loadTranslations(),
         this.loadProjects()
       ]);
 
-      // Inizializza i moduli
+      // Initialize modules
       this.initTheme();
       this.initLanguage();
       this.initAnimations();
 
-      // Popola il contenuto dinamico
+      // Populate dynamic content
       this.populateContent();
 
       
@@ -28,9 +28,9 @@ class PortfolioApp {
       // Setup event listeners
       this.setupEventListeners();
 
-      console.log('Portfolio caricato con successo');
+      console.log('Portfolio loaded successfully');
     } catch (error) {
-      console.error('Errore durante l\'inizializzazione:', error);
+      console.error('Error during initialization:', error);
     }
   }
 
@@ -39,7 +39,7 @@ class PortfolioApp {
       const response = await fetch('data/translations.json');
       this.translations = await response.json();
     } catch (error) {
-      console.error('Errore caricamento traduzioni:', error);
+      console.error('Error loading translations:', error);
       this.translations = { it: {}, en: {} };
     }
   }
@@ -49,7 +49,7 @@ class PortfolioApp {
       const response = await fetch(`data/projects.json?v=${new Date().getTime()}`);
       this.projects = await response.json();
     } catch (error) {
-      console.error('Errore caricamento progetti:', error);
+      console.error('Error loading projects:', error);
       this.projects = { projects: [] };
     }
   }
@@ -98,19 +98,19 @@ class PortfolioApp {
     this.currentLanguage = lang;
     document.documentElement.lang = lang;
 
-    // Aggiorna selector lingua
+    // Update language selector
     const currentLangEl = document.getElementById('current-lang');
     if (currentLangEl) {
       currentLangEl.textContent = lang.toUpperCase();
     }
 
-    // Aggiorna tutti gli elementi con data-translate
+    // Update all elements with data-translate
     this.updateTranslations();
 
-    // Aggiorna meta tags
+    // Update meta tags
     this.updateMetaTags(lang);
 
-    // Aggiorna schema progetti
+    // Update project schema
     this.updateProjectSchema(lang);
 
     localStorage.setItem('language', lang);
@@ -146,7 +146,7 @@ class PortfolioApp {
   updateProjectSchema(lang) {
     if (!this.projects || !this.projects.projects) return;
 
-    // Rimuovi lo schema precedente se esiste
+    // Remove previous schema if exists
     const existingSchema = document.getElementById('project-schema');
     if (existingSchema) {
       existingSchema.remove();
@@ -234,7 +234,7 @@ class PortfolioApp {
   }
 
   initAnimations() {
-    // Animazioni fade-in al scroll
+    // Fade-in animations on scroll
     this.setupScrollAnimations();
   }
 
@@ -250,7 +250,7 @@ class PortfolioApp {
       });
     }, { threshold: 0.1 });
 
-    // Aggiungi classe fade-in agli elementi che vuoi animare
+    // Add fade-in class to elements you want to animate
     const animatedElements = document.querySelectorAll('section, .project-card');
     animatedElements.forEach(el => {
       el.classList.add('fade-in');
@@ -280,20 +280,20 @@ class PortfolioApp {
       const lang = e.target.getAttribute('data-lang');
       if (lang) {
         this.setLanguage(lang);
-        this.populateContent(); // Ricarica il contenuto dinamico
-        this.initLazyLoading(); // Re-inizializza il lazy loading per le nuove immagini
+        this.populateContent(); // Reload dynamic content
+        this.initLazyLoading(); // Re-initialize lazy loading for new images
         langMenu.classList.add('hidden');
       }
     });
 
-    // Chiudi menu lingua al click esterno
+    // Close language menu on outside click
     document.addEventListener('click', (e) => {
       if (!e.target.closest('#lang-button') && !e.target.closest('#lang-menu')) {
         langMenu?.classList.add('hidden');
       }
     });
 
-    // Smooth scrolling per anchor links
+    // Smooth scrolling for anchor links
     document.addEventListener('click', (e) => {
       const anchor = e.target.closest('a[href^="#"]');
       if (!anchor) return;
@@ -308,7 +308,7 @@ class PortfolioApp {
   }
 }
 
-// Inizializza l'app quando il DOM è pronto
+// Initialize app when DOM is ready
 if (document.readyState === 'loading') {
   document.addEventListener('DOMContentLoaded', () => new PortfolioApp());
 } else {

@@ -22,7 +22,7 @@
       },
       "image": "project2.jpg",
       "imageOptimized": "project2.webp",
-      "technologies": ["Python", "LangChain", "LLM", "Agent", "Wolfram Alpha"],
+      "technologies": ["Python", "GoogleADK", "LLM", "Agent", "Wolfram Alpha"],
       "github": "https://github.com/VerifyLoop/stem-solver-adk",
       "demo": null
     },

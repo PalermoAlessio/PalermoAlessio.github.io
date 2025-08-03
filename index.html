@@ -4,9 +4,9 @@
               <meta charset="UTF-8">
               <meta name="viewport" content="width=device-width, initial-scale=1.0">
             
-              <!-- CRITICAL CSS INLINE - Aggiungi questo CSS direttamente nel head -->
+              <!-- Critical CSS inline for above-the-fold content -->
               <style>
-                /* Critical CSS per Above-the-fold */
+                /* Critical CSS for above-the-fold */
                 body{margin:0;font-family:ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;background-color:#f9fbfb;color:#101817;transition:background-color .3s ease,color .3s ease}
                 .dark{background-color:#1a1a1a;color:#e5e7eb}
                 .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
@@ -23,12 +23,12 @@
                 }
               </style>
             
-              <!-- SEO Meta Tags (no changes needed) -->
+              <!-- SEO Meta Tags -->
               <title>Palermo Alessio - Software AI Engineer | Portfolio Professionale</title>
               <meta name="description" content="Portfolio di Alessio Palermo, Software AI Engineer specializzato in LLM, Machine Learning e sviluppo hardware. Scopri progetti innovativi e competenze tecniche.">
               <link rel="apple-touch-icon" href="/images/logo.png">
               
-              <!-- Preload ONLY critical resources -->
+              <!-- Preload critical resources -->
               <link rel="preload" href="/images/profile.webp" as="image" type="image/webp" fetchpriority="high">
               
               <!-- Preconnect to external domains -->
@@ -36,13 +36,13 @@
               <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
               <link rel="preconnect" href="https://cdn.tailwindcss.com">
             
-              <!-- DEFER Google Fonts (non-critical) -->
+              <!-- Defer Google Fonts -->
               <link rel="stylesheet" href="https://fonts.googleapis.com/css2?display=swap&family=Public+Sans:wght@400;500;700;900&family=Noto+Sans:wght@400;500;700;900" media="print" onload="this.media='all'">
               <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?display=swap&family=Public+Sans:wght@400;500;700;900&family=Noto+Sans:wght@400;500;700;900"></noscript>
             
-              <!-- DEFER Tailwind (non-critical per above-the-fold) -->
+              <!-- Defer Tailwind CSS -->
               <script>
-                // Load Tailwind async
+                // Load Tailwind asynchronously
                 const tailwindScript = document.createElement('script');
                 tailwindScript.src = 'https://cdn.tailwindcss.com?plugins=forms,container-queries';
                 tailwindScript.async = true;
@@ -90,7 +90,7 @@
                       "Large Language Models (LLM)", "RAG", "Prompt Engineering", "Fine-Tuning",
                       "Neural Networks", "Supervised Learning", "Unsupervised Learning", "NLP",
                       "MCP Server Architectures",
-                      "TensorFlow", "PyTorch", "LangChain", "scikit-learn", "Pandas", "NumPy", "FastAPI",
+                      "TensorFlow", "PyTorch", "scikit-learn", "Pandas", "NumPy", "FastAPI",
                       "Google Cloud Platform", "Vertex AI", "Google AI Studio", "Docker", "Git", "GitHub",
                       "Vector Databases", "PostgreSQL", "SQLite",
                       "Linux (ArchLinux)", "Windows",
@@ -167,7 +167,7 @@
                       <header class="@container" itemscope itemtype="https://schema.org/Person">
                         <div class="@[480px]:px-4 @[480px]:py-3">
                           <div class="w-full flex flex-col justify-end overflow-hidden bg-[#f9fbfb] dark:bg-gray-800 @[480px]:rounded-xl h-[400px] relative">
-                            <!-- Preload dell'immagine critica -->
+                            <!-- Critical image preload -->
                             <img 
                               src="/images/profile.webp" 
                               alt="Alessio Palermo - Software AI Engineer specializzato in Large Language Models e sviluppo sistemi intelligenti, con background in telecomunicazioni e automazione industriale"
@@ -186,7 +186,7 @@
                           Palermo Alessio
                         </h1>
                         <p class="text-accent dark:text-accent-dark text-sm font-normal leading-normal pb-3 pt-1 px-4 text-center" data-translate="title" itemprop="jobTitle">
-                          I am a Machine Learning Specialist (LLM, RAG, Agents)
+                          LLM Specialist
                         </p>
                         <div class="flex px-4 py-3 justify-center">
                           <a href="https://www.linkedin.com/in/alessio-palermo-41b306152/" target="_blank" rel="noopener noreferrer" class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-10 px-4 bg-primary dark:bg-primary-dark text-white text-sm font-bold leading-normal tracking-[0.015em] hover:opacity-90 transition-opacity" aria-label="Visualizza profilo LinkedIn">
@@ -201,7 +201,7 @@
                           About Me
                         </h2>
                         <p class="text-base font-normal leading-normal pb-3 pt-1 px-4" data-translate="about-content">
-                          Fin dai tempi della scuola, sviluppo progetti autonomi in software e hardware across diversi campi dell'informatica, con una specializzazione recente negli LLM e nelle IA in generale.
+                          LLM Specialist con background in telecomunicazioni e automazione industriale.
                         </p>
                       </section>
             
@@ -212,7 +212,7 @@
                             Esperienza
                           </h2>
                           <ul class="list-disc pl-5 text-base font-normal leading-normal space-y-2" id="experience-list">
-                            <!-- Popolato dinamicamente -->
+                            <!-- Dynamically populated -->
                           </ul>
                         </div>
                         <div class="flex-1">
@@ -220,7 +220,7 @@
                             Competenze
                           </h2>
                           <ul class="list-disc pl-5 text-base font-normal leading-normal space-y-2" id="skills-list">
-                            <!-- Popolato dinamicamente -->
+                            <!-- Dynamically populated -->
                           </ul>
                         </div>
                       </section>
