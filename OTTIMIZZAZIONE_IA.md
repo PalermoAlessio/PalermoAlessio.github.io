@@ -26,3 +26,9 @@ Questo documento riassume le prossime possibili ottimizzazioni per migliorare la
 **Azioni:**
 - Creare un nuovo file `privacy.html` con un testo di policy di base.
 - Aggiungere un link alla pagina della privacy nel footer del sito.
+
+> **TODO Privacy (da valutare più avanti):**
+> – Sito statico, **nessun tracciamento** e niente cookie non essenziali.
+> – Contatto: **[info@palermoalessio.com](mailto:info@palermoalessio.com)** per richieste e diritti privacy.
+> – Link esterni (LinkedIn, GitHub) possono applicare le loro policy.
+> – Quando/Se aggiungerò un form o analytics, aggiornerò questa pagina.
