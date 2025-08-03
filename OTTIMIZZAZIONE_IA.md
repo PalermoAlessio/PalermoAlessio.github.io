@@ -1,25 +1,28 @@
-# Ottimizzazione IA — Note operative (aggiornato 2025-08-03)
+# Piano di Ottimizzazione per IA e E-E-A-T
 
-## 1) Schema `Person` (COMPLETATO)
-- `name`: **Alessio Palermo** (standard Nome+Cognome per coerenza con motori e profili).
-- `jobTitle`: **AI & Machine Learning Specialist** (allineato al CV).
-- `email`: **info@palermoalessio.com** (unificata).
-- `telephone`: **+393468609789** (E.164).
-- `alumniOf`: **Istituto Tecnico Statale “E. Majorana”, Grugliasco (TO)**.
-- `worksFor`: **Solutions30** + **Self-employed (Consulenza)**.
-- `knowsAbout`: LLM, RAG, Prompt Engineering, AI Agents, TensorFlow, PyTorch, LangChain, GCP Vertex AI, FastAPI, Vector DB, …
+Questo documento riassume le prossime possibili ottimizzazioni per migliorare la leggibilità del sito da parte delle IA e per rafforzare i segnali di E-E-A-T (Experience, Expertise, Authoritativeness, Trustworthiness).
 
-## 2) “Su di Me” (COMPLETATO lato contenuti)
-- Manteniamo l’incipit “Fin dai tempi della scuola…”
-- Aggiunta frase ponte → focus attuale su **LLM/RAG/Agents** con taglio personale (non da CV “puro”).
+## 1. Arricchire lo Schema `Person`
 
-## 3) Privacy Policy (DA VALUTARE PIÙ AVANTI)
-**Stato:** posticipato su richiesta.  
-**Bozza minimale (quando/Se si farà):**
-- Sito statico, **nessun tracciamento** e nessun cookie non essenziale.
-- Contatto: **info@palermoalessio.com**.
-- Link esterni: LinkedIn e GitHub (possono avere propri cookie/policy).
-- Diritti utente (UE/GDPR): richieste via email (accesso, rettifica, cancellazione).
-- Nessuna raccolta di dati tramite form sul sito.
+**Obiettivo:** Fornire dati strutturati più dettagliati per comunicare competenza e autorevolezza.
 
-> Quando decidi di inserirla: creare `privacy.html` e aggiungere link “Privacy” nel footer.
+**Azioni:**
+- Aggiornare `alumniOf` con il nome specifico dell'istituto di formazione.
+- Aggiornare `worksFor` con un datore di lavoro specifico (se applicabile).
+- Rendere più specifiche le voci in `knowsAbout` per allinearle con le competenze elencate.
+
+## 2. Espandere la Sezione "Su di Me"
+
+**Obiettivo:** Dimostrare esperienza diretta (la "E" di E-E-A-T) attraverso una narrazione più completa.
+
+**Azioni:**
+- Sviluppare 2-3 paragrafi che descrivano il percorso professionale, le aree di specializzazione e la filosofia di problem-solving.
+- Integrare il nuovo testo nel file `data/translations.json`.
+
+## 3. Aggiungere una Pagina di Privacy Policy
+
+**Obiettivo:** Aumentare la fiducia (la "T" di E-E-A-T) e la professionalità del sito.
+
+**Azioni:**
+- Creare un nuovo file `privacy.html` con un testo di policy di base.
+- Aggiungere un link alla pagina della privacy nel footer del sito.
