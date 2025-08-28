@@ -27,16 +27,16 @@
       "demo": null
     },
     {
-      "id": "tts-chrome-extension",
-      "title": "TTS Chrome Extension",
+      "id": "mcp-behavioral-prompts",
+      "title": "MCP Behavioral Prompts",
       "description": {
-        "it": "Un'estensione per Chrome leggera e potente che converte il testo selezionato in parlato utilizzando il modello TTS di Google Gemini 2.5 Flash. È dotata di una barra di controllo mobile e trascinabile per gestire la riproduzione audio (play/pausa, salto, controllo della velocità). Gli utenti possono attivarla facendo clic con il pulsante destro del mouse sul testo selezionato o utilizzando una scorciatoia da tastiera. L'estensione è costruita utilizzando il moderno standard Manifest V3 per le estensioni di Chrome.",
-        "en": "A lightweight and powerful Chrome extension that converts selected text into speech using Google's Gemini 2.5 Flash TTS model. It features a floating, draggable control bar to manage audio playback (play/pause, skip, speed control). Users can activate it by right-clicking selected text or using a keyboard shortcut. The extension is built using the modern Manifest V3 standard for Chrome extensions."
+        "it": "Server specializzato del Model Context Protocol (MCP) che fornisce prompt comportamentali avanzati per migliorare le capacità di ragionamento e interazione degli assistenti AI. Include template specializzati come Complex Project Analyst per definizioni iterative di progetti, Socratic Strategic Consultant per interrogazioni critiche, Critical Code Reviewer per analisi di codice production-ready e AI Software Architect per pianificazione strutturata del software.",
+        "en": "A specialized Model Context Protocol (MCP) server that provides behavioral modification prompts to enhance AI assistants' reasoning and interaction capabilities. Features specialized prompt templates including Complex Project Analyst for iterative project definition, Socratic Strategic Consultant for critical questioning, Critical Code Reviewer for production-ready code analysis, and AI Software Architect for structured software planning."
       },
       "image": "project3.jpg",
       "imageOptimized": "project3.webp",
-      "technologies": ["JavaScript", "HTML", "CSS", "Chrome Extension", "Gemini API"],
-      "github": "https://github.com/PalermoAlessio/tts-chrome-extension",
+      "technologies": ["Python", "MCP", "Poetry", "AI Prompts", "Server Architecture"],
+      "github": "https://github.com/VerifyLoop/mcp-behavioral-prompts",
       "demo": null
     }
   ]
